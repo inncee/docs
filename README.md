@@ -1,8 +1,8 @@
 # docs
 Inncee API documentation
 
-* [1.1 Create Account](#11)
-* [1.2 Install your tracking script](#12)
+* [1.1 Create Account](#11-create-account)
+* [1.2 Install your tracking script](#12-install-your-tracking-script)
 
 This guide will be able to help walk you through on how to get started with installing Inncee onto your custom website. 
 
