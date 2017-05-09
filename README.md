@@ -25,3 +25,8 @@ You will need to install our tracking script library after the opening of the <h
 For our platform to be able to analyze your data and look for information, we need to be able to record events that happened on your website. 
 
 Some events are automatically tracked while others requires you to install code snippets manually or calling our webhook end points in our app to send data to us.
+
+
+|this|is  |a|test|table|
+|----|----|-|----|-----|
+|am i|able|to|generate|this|
