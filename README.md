@@ -459,11 +459,133 @@ via emails. Valid values are “true” and “false”</td>
     <ul>
   		<li>enabled : The customer has verified their email address and created an active account</li>
   		<li>disabled: The customer has not verified their email addresses and logged into their account yet. Account is considered not active</li>
-	</ul>  
-
+    </ul>
     </td>
   </tr>
 </table>
 
 </body>
 </html>
+
+###### PRODUCTS API
+
+<html>
+<body>
+
+<table>
+  <tr>
+    <th>Products</th>
+    <th>POST</th> 
+    <th>/hooks/products/create</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a new product has been created.</td>
+  </tr>
+  <tr>
+    <th>Products</th>
+    <th>POST</th> 
+    <th>/hooks/products/update</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a customer account has been updated</td>
+  </tr>
+    <tr>
+    <td colspan="3">
+    {
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;""products": [
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465,
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": "2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_name": "IPod Touch 8GB",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"brand": "Apple",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"tags": "music, device, white",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "product/android-phone/lenovo-a1000-hitam-/0889800170294",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"image_url": "https://api.oktagon.co.id/core/images/product /ZTE%20Kis%203%20V8118w%20Biru.jpg",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"variants": [
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 123454534,
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 3245465,
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "8G",
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price": "128.00",
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sku": "IPOD2008PINK",
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"inventory_quantity": null
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 123454534,
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 3245465,
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "16G",
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price": "128.00",
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sku": "IPOD2008PINK",
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"inventory_quantity": null
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
+     <br />}
+    </td>
+  </tr>
+  <tr>
+    <th>Products</th>
+    <th>DELETE</th> 
+    <th>/hooks/products/{#productid}/delete</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a product has been deleted</td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td colspan="2">The unique numerical identifier for the product</td>
+  </tr>
+  <tr>
+    <td>created_at</td>
+    <td colspan="2">The date and time that the product was created</td>
+  </tr>
+  <tr>
+    <td>updated_at</td>
+    <td colspan="2">The date and time that the product was updated</td>
+  </tr>
+  <tr>
+    <td>product_name</td>
+    <td colspan="2">Supplier or brand name of the product</td>
+  </tr>
+  <tr>
+    <td>brand</td>
+    <td colspan="2">The customer’s city</td>
+  </tr>
+  <tr>
+    <td>tags</td>
+    <td colspan="2">A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.</td>
+  </tr>
+  <tr>
+    <td>path</td>
+    <td colspan="2">The unique url path visitors use to view the product</td>
+  </tr>
+  <tr>
+    <td>image_url</td>
+    <td colspan="2">The url to the main image of the product
+    </td>
+  </tr>
+  <tr>
+    <td>variants</td>
+    <td colspan="2">A list of variant objects, each representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as "small black", "medium black", "large blue"), would be a variant. 
+    <br /><br />If your product does not have a variant, then simply create 1 variant record with the name “Default” to record the product’s SKU, price and other details.
+    <br /><br />
+    <ul>
+  <li>id: The unique numerical identifier to identify the variant.</li>
+  <li>product_id: The unique product id that the variant belongs to.</li>
+  <li>name: Name of the variant</li>
+  <li>price: Price of the variant</li>
+  <li>sku: SKU number of the variant</li>
+  <li>inventory_quantity: Total available units of inventory available for sale.</li>
+</ul>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+
