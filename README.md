@@ -42,7 +42,7 @@ Install these code snippets into your online store to begin tracking the followi
   </tr>
   <tr>
     <td>User logged in</td>
-    <td>This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in
+    <td>Required. This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in
     <br /><br /> It can be omitted if the user is not logged in 
     <br /><br /> innceeID * – Your unique account ID
     </td>
@@ -59,12 +59,12 @@ Install these code snippets into your online store to begin tracking the followi
     <br /><br />productID * – The unique ID of the product being added to cart variantID
     </td>
     <td>analytics.track(“addtocart”,{<br />‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
-    <br />‘categoryID’: ‘yyyyy’,
-    <br />‘productID’:‘ppppp’,
-    <br />‘variantID’: ‘’,
-    <br />‘Price’: ’12.50’,
-    <br />‘Quantity’: ‘1’,
-    <br />‘Currency’: ‘$’
+    <br />&nbsp;&nbsp;‘categoryID’: ‘yyyyy’,
+    <br />&nbsp;&nbsp;‘productID’:‘ppppp’,
+    <br />&nbsp;&nbsp;‘variantID’: ‘’,
+    <br />&nbsp;&nbsp;‘Price’: ’12.50’,
+    <br />&nbsp;&nbsp;‘Quantity’: ‘1’,
+    <br />&nbsp;&nbsp;‘Currency’: ‘$’
     <br />});
     </td>
   </tr>
@@ -75,8 +75,8 @@ Install these code snippets into your online store to begin tracking the followi
     <br /><br />cartID * - A unique ID of the shopping cart being checked out
     </td>
     <td>analytics.track(“Checkout”,{
-    <br />‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
-    <br />‘cartID’ : ‘qqqqqq’
+    <br />&nbsp;&nbsp;‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
+    <br />&nbsp;&nbsp;‘cartID’ : ‘qqqqqq’
     <br />});
     </td>
   </tr>
@@ -87,8 +87,8 @@ Install these code snippets into your online store to begin tracking the followi
     <br /><br />orderID * - The unique order ID
     </td>
     <td>analytics.track(“OrderComplete”,{
-    <br />‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
-    <br />‘orderID’ : ‘xxxxxx’
+    <br />&nbsp;&nbsp;‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
+    <br />&nbsp;&nbsp;‘orderID’ : ‘xxxxxx’
     <br />});
     </td>
   </tr>
@@ -103,21 +103,23 @@ There are some events that are automatically tracked by us when you first instal
 - Add to cart clicks
 - UTM Campaign visits
 
-##### Backend Events
+#### Backend Events
 The code snippets above help us to track events that happen on your online store. We will also need to track certain events that happen in the backend of your store as well.
 
 We’ve setup a series of API end points that ready to receive JSON data from your store when certain backend events happen.
 
 For example, when a new order has been created, you can send a JSON response with information about the new order to our API end point and our platform can begin storing that information for analysis.
 
-###### Prerequisites
+##### Prerequisites
 When making API calls to our servers, you are required to first generate a HMAC and attach it to your headers along with the timestamp used to generate it.
 
 The recommended method for generating the HMAC using PHP is as follows:
 
 ```$timestamp = time(); 
+$timestamp = time();
 $secret = YOUR_SHARED_SECRET;
 $domain = "YOUR_DOMAIN.COM";
+
 $message = "store=".$domain."&timestamp=".$timestamp;
 $hmac = base64_encode(hash_hmac('sha256', $message, $secret, true));
 ```
@@ -125,10 +127,14 @@ $hmac = base64_encode(hash_hmac('sha256', $message, $secret, true));
 When making calls to our servers, attach the timestamp as a URL parameter.
 ```
 $ch = curl_init();
-$url = "https://api.inncee.com/hooks/order/
+
+$url = "https://api.inncee.com/hooks/order/create?timestamp".$timestamp
+curl_setopt($ch,CURLOPT_URL, $url);
 ```
 
-the timestamp should be the same one used to generate the HMAC. Now attach the HMAC as a header with the key HTTP_X_HMAC_SHA256
+the timestamp should be the same one used to generate the HMAC. 
+
+Now attach the HMAC as a header with the key HTTP_X_HMAC_SHA256.
 
 ```
 $hmac_header = "HTTP_X_HMAC_SHA256:".$hmac
@@ -205,7 +211,7 @@ See the next section for a list of all our API end points and when you can send 
     <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"tax_adjustment": "-1.00",
     <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"quantity": "2"
     <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;]
     <br /> &nbsp; &nbsp; &nbsp; &nbsp;}
     <br /> &nbsp; &nbsp; &nbsp; &nbsp;]
     <br /> &nbsp; &nbsp;}
@@ -401,8 +407,7 @@ than or equal to $30</li>
     <br />&nbsp;&nbsp;&nbsp;&nbsp;"customers": [
     <br />&nbsp;&nbsp;&nbsp;&nbsp;{
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 543213,
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at":
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at":"2017-02-08T14:56:07-05:00",
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"accepts_marketing": true,
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"city": "Ottawa",
@@ -550,7 +555,7 @@ via emails. Valid values are “true” and “false”</td>
   </tr>
   <tr>
     <td>product_name</td>
-    <td colspan="2">Supplier or brand name of the product</td>
+    <td colspan="2">Name of the product</td>
   </tr>
   <tr>
     <td>brand</td>
