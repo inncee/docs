@@ -31,6 +31,9 @@ you to install code snippets manually or calling our webhook end points in our a
 #### Event Setup
 Install these code snippets into your online store to begin tracking the following events.
 
+<html>
+<body>
+
 <table>
   <tr>
     <th>Event</th>
@@ -39,19 +42,55 @@ Install these code snippets into your online store to begin tracking the followi
   </tr>
   <tr>
     <td>Required.</td>
-    <td>This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in.<br /><br /> It can be omitted if the user is not
-logged in. <br /><br /> innceeID * – Your unique account ID. </td>
-    <td>analytics.identify(‘USER_ID’, { ‘innceeID’: ‘YOUR_ACCOUNT_ID’});</td>
+    <td>This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in.
+    <br /><br /> It can be omitted if the user is not logged in. 
+    <br /><br /> innceeID * – Your unique account ID. 
+    </td>
+    <td>analytics.identify(‘USER_ID’,{ 
+    <br />‘innceeID’:‘YOUR_ACCOUNT_ID’
+    <br />});
+    </td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Add to cart</td>
+    <td>Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button. 
+    <br /><br />innceeID * – Your unique account ID.
+    <br /><br />categoryID * - The unique ID of your category.
+    <br /><br />productID * – The unique ID of the product being added to cart variantID
+    </td>
+    <td>analytics.track(“addtocart”,{<br />‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
+    <br />‘categoryID’: ‘yyyyy’,
+    <br />‘productID’:‘ppppp’,
+    <br />‘variantID’: ‘’,
+    <br />‘Price’: ’12.50’,
+    <br />‘Quantity’: ‘1’,
+    <br />‘Currency’: ‘$’
+    <br />});
+    </td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Checkout</td>
+    <td>Required. This code block records the event when a user initiates a checkout. It should be included on every page that has a checkout button.
+    <br /><br />innceeID * – Your unique account ID
+    <br /><br />cartID * - A unique ID of the shopping cart being checked out
+    </td>
+    <td>analytics.track(“Checkout”,{
+    <br />‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
+    <br />‘cartID’ : ‘qqqqqq’
+    <br />});
+    </td>
+  </tr>
+    <tr>
+    <td>Order Completed</td>
+    <td>Required. Records the event when an order has been completed
+    <br /><br />innceeID * – Your unique account ID
+    <br /><br />orderID * - The unique order ID
+    </td>
+    <td>analytics.track(“OrderComplete”,{
+    <br />‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
+    <br />‘orderID’ : ‘xxxxxx’
+    <br />});
+    </td>
   </tr>
 </table>
 
