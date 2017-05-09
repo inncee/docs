@@ -140,69 +140,152 @@ See the next section for a list of all our API end points and when you can send 
 
 ###### ORDERS API 
 
-|Orders | POST | /hooks/order/create |
-| --- | --- | ----|
-|Called when a new order has been created.|||
-Orders | POST | /hooks/order/create |
-|Called when an order or many orders has been updated|||  
-```
-{
-  "orders": [
-    {
-      "cancel_reason": null,
-      "cancelled_at": null,
-      "created_at": "2017-02-08T14:56:07-05:00",
-      "currency": "SGD",
-      "customer_id": 1244345,
-      "discount_codes": [],
-      "fulfilled_at": null,
-      "id": 12345667,
-      "line_items": [
-        {
-          "brand": "Apple",
-          "fulfillable_quantity": 1,
-          "line_item_id": 1071823175,
-          "price": "199.00",
-          "product_id": 447654529,
-          "product_name": "IPod Touch 8GB",
-          "quantity": 1,
-          "sku": "IPOD2009BLACK",
-          "total_discount": "0.00",
-          "variant_id": 12133424,
-          "variant_name": "Black"
-        }
-      ],
-      "order_reference": "#1002",
-      "order_source": "web",
-      "order_status": "open",
-      "refunds": [
-        {
-          "adjustment": "-3.50",
-          "created_at": "",
-          "quantity": "2",
-          "tax_adjustment": "-1.00"
-        }
-      ],
-      "subtotal_price": "199.00",
-      "taxes_included": false,
-      "total_discounts": "0.00",
-      "total_line_items_price": "199.00",
-      "total_price": "199.00",
-      "total_tax": "0.00",
-      "updated_at": "2017-02-08T14:56:07-05:00"
-    }
-  ]
-}
-```
+<html>
+<body>
 
 <table>
-    <tr>
-        <td>Foo</td>
-    </tr>
+  <tr>
+    <th>Orders</th>
+    <th>POST</th> 
+    <th>/hooks/order/create</th>
+  </tr>
+  <tr>
+    <td  colspan="3">Called when a new order has been created.</td>
+  </tr>
+  <tr>
+    <th>Orders</th>
+    <th>POST</th> 
+    <th>/hooks/order/create</th>
+  </tr>
+  <tr>
+    <td  colspan="3">Called when a new order has been created.</td>
+  </tr>
+  <tr>
+    <td  colspan="3">
+    <br />{"orders": [
+    <br />{
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"id": 12345667,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"created_at": "2017-02-08T14:56:07-05:00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"fulfilled_at": null,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"total_price": "199.00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"subtotal_price": "199.00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"total_tax": "0.00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"taxes_included": false,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"currency": "SGD",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"total_discounts": "0.00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"total_line_items_price": "199.00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"order_reference": "#1002",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"order_source": "web",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"order_status": "open",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"cancelled_at": NULL,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"cancel_reason": NULL,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"customer_id": 1244345,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"discount_codes": [
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;],
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"line_items": [
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"line_item_id": 1071823175,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 447654529,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"variant_id": 12133424,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_name": "IPod Touch 8GB",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"quantity": 1,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price": "199.00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sku": "IPOD2009BLACK",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"variant_name": "Black",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"brand": "Apple",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fulfillable_quantity": 1,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"total_discount": "0.00"
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;], 
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"refunds": [
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": “”,
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"adjustment": "-3.50",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"tax_adjustment": "-1.00",
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"quantity": "2"
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;}
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp;]
+    <br /> &nbsp; &nbsp;}
+    </td>
+  </tr>
+  <tr>
+    <th>Orders</th>
+    <th>DELETE</th>
+    <th>/hooks/order/{#orderid}/delete</th>
+  </tr>
+  <tr>
+    <td  colspan="3">Called when an order has been marked for deletion</td>
+  </tr>
+  <tr>
+    <td  colspan="3"></td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td colspan="2">The unique numeric identifier for the order. Order id should be unique across the system. No 2 orders should have the same ids</td> 
+  </tr>
+  <tr>
+    <td>created_at</td>
+    <td colspan="2">The date and time when the order was created</td> 
+  </tr>
+  <tr>
+    <td>updated_at</td>
+    <td colspan="2">The date and time when the order was updated.</td> 
+  </tr>
+  <tr>
+    <td>fulfilled_at</td>
+    <td colspan="2">The date and time when the order was fulfilled. If order is not fulfilled,
+value should be NULL.</td> 
+  </tr>
+  <tr>
+    <td>total_price</td>
+    <td colspan="2">The sum of all the prices of all the items in the order, taxes and discounts
+included. (value must be positive)</td> 
+  </tr>
+  <tr>
+    <td>subtotal_price</td>
+    <td colspan="2">Price of the order before shipping and taxes.</td> 
+  </tr>
+  <tr>
+    <td>total_tax</td>
+    <td colspan="2">The sum of all the taxes applied to the order. (value must be positive)</td> 
+  </tr>
+  <tr>
+    <td>taxes_included</td>
+    <td colspan="2">States whether or not taxes are included in the order subtotal. Valid values
+include “true” or “false”</td> 
+  </tr>
+  <tr>
+    <td>currency</td>
+    <td colspan="2">The three letter code for the currency used for payment</td> 
+  </tr>
+  <tr>
+    <td>total_discounts</td>
+    <td colspan="2">The total amount of discounts to be applied to the price of the order</td> 
+  </tr>
+  <tr>
+    <td>total_line_items_price</td>
+    <td colspan="2">The sum of all the prices of all the items in the order</td> 
+  </tr>
+  <tr>
+    <td>Order_reference</td>
+    <td colspan="2">The order reference number that the customer sees.</td> 
+  </tr>
+  <tr>
+    <td>order_source</td>
+    <td colspan="2">Where the order originated. Valid values include “web”, “pos” or “mobile”.
+Mobile refers to orders that originated from a native app</td> 
+  </tr>
+  <tr>
+    <td>order_status</td>
+    <td colspan="2">Status of the order. Valid values include
+    <br />- open – For orders that have not been fulfilled
+    <br />- closed – For orders that have been fulfilled and completed
+    <br />- cancelled – For orders that have been cancelled</td> 
+  </tr>
 </table>
 
-|Orders | DELETE | /hooks/order/{#orderid}/delete
-| --- | --- | ----|
-Called when an order has been marked for deletion.|||
-||||
-|id|The unique numeric identifier for the order. Order id should be unique across the system. No 2 orders should have the same ids||
+</body>
+</html>
