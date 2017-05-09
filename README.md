@@ -87,53 +87,53 @@ See the next section for a list of all our API end points and when you can send 
 |Called when a new order has been created.|||
 Orders | POST | /hooks/order/create |
 |Called when an order or many orders has been updated|||  
-```{
-"orders": [
+```
 {
-"id": 12345667, 
-"created_at": "2017-02-08T14:56:07-05:00",
-"updated_at": "2017-02-08T14:56:07-05:00",
-"fulfilled_at": null,
-"total_price": "199.00",
-"subtotal_price": "199.00",
-"total_tax": "0.00",
-"taxes_included": false,
-"currency": "SGD",
-"total_discounts": "0.00",
-"total_line_items_price": "199.00",
-"order_reference": "#1002",
-"order_source": "web",
-"order_status": "open",
-"cancelled_at": NULL,
-"cancel_reason": NULL,
-"customer_id": 1244345,
-"discount_codes": [
-],
-"line_items": [
-{
-"line_item_id": 1071823175,
-"product_id": 447654529,
-"variant_id": 12133424,
-"product_name": "IPod Touch 8GB",
-"quantity": 1,
-"price": "199.00",
-"sku": "IPOD2009BLACK",
-"variant_name": "Black",
-"brand": "Apple",
-"fulfillable_quantity": 1,
-"total_discount": "0.00"
-}
-],
-"refunds": [
-{
-"created_at": “”,
-"adjustment": "-3.50",
-"tax_adjustment": "-1.00",
-"quantity": "2"
-}
-]
-}
-]
+  "orders": [
+    {
+      "cancel_reason": null,
+      "cancelled_at": null,
+      "created_at": "2017-02-08T14:56:07-05:00",
+      "currency": "SGD",
+      "customer_id": 1244345,
+      "discount_codes": [],
+      "fulfilled_at": null,
+      "id": 12345667,
+      "line_items": [
+        {
+          "brand": "Apple",
+          "fulfillable_quantity": 1,
+          "line_item_id": 1071823175,
+          "price": "199.00",
+          "product_id": 447654529,
+          "product_name": "IPod Touch 8GB",
+          "quantity": 1,
+          "sku": "IPOD2009BLACK",
+          "total_discount": "0.00",
+          "variant_id": 12133424,
+          "variant_name": "Black"
+        }
+      ],
+      "order_reference": "#1002",
+      "order_source": "web",
+      "order_status": "open",
+      "refunds": [
+        {
+          "adjustment": "-3.50",
+          "created_at": "",
+          "quantity": "2",
+          "tax_adjustment": "-1.00"
+        }
+      ],
+      "subtotal_price": "199.00",
+      "taxes_included": false,
+      "total_discounts": "0.00",
+      "total_line_items_price": "199.00",
+      "total_price": "199.00",
+      "total_tax": "0.00",
+      "updated_at": "2017-02-08T14:56:07-05:00"
+    }
+  ]
 }
 ```
 
