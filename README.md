@@ -154,7 +154,7 @@ See the next section for a list of all our API end points and when you can send 
   </tr>
   <tr>
     <th>Orders</th>
-    <th>POST</th> 
+    <th>PUT</th> 
     <th>/hooks/order/create</th>
   </tr>
   <tr>
@@ -389,7 +389,7 @@ than or equal to $30.</li>
   </tr>
   <tr>
     <th>Customers</th>
-    <th>POST</th> 
+    <th>PUT</th> 
     <th>/hooks/customers/create</th>
   </tr>
   <tr>
@@ -483,7 +483,7 @@ via emails. Valid values are “true” and “false”</td>
   </tr>
   <tr>
     <th>Products</th>
-    <th>POST</th> 
+    <th>PUT</th> 
     <th>/hooks/products/update</th>
   </tr>
   <tr>
@@ -492,7 +492,7 @@ via emails. Valid values are “true” and “false”</td>
     <tr>
     <td colspan="3">
     {
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;""products": [
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;"products": [
     <br />&nbsp;&nbsp;&nbsp;&nbsp;{
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465,
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": "2017-02-08T14:56:07-05:00",
@@ -554,7 +554,7 @@ via emails. Valid values are “true” and “false”</td>
   </tr>
   <tr>
     <td>brand</td>
-    <td colspan="2">The customer’s city</td>
+    <td colspan="2">Supplier or brand name of the product</td>
   </tr>
   <tr>
     <td>tags</td>
@@ -583,6 +583,86 @@ via emails. Valid values are “true” and “false”</td>
   <li>inventory_quantity: Total available units of inventory available for sale.</li>
 </ul>
     </td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+###### CATEGORY API
+
+<html>
+<body>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>POST</th> 
+    <th>/hooks/category/create</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a new category has been created.</td>
+  </tr>
+  <tr>
+    <th>Category</th>
+    <th>PUT</th> 
+    <th>/hooks/category/update</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a category’s information has been updated</td>
+  </tr>
+    <tr>
+    <td colspan="3">
+    {
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;"categories": [
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465,
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": "2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category_name": "Android Phones",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "/products/android-phone/AN03",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"parent_id": "2434435"
+     <br />&nbsp;&nbsp;&nbsp;}
+     <br />&nbsp;&nbsp;&nbsp;]
+     <br />}
+    </td>
+  </tr>
+  <tr>
+    <th>Category</th>
+    <th>DELETE</th> 
+    <th>/hooks/category/{#categoryid}/delete</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a category has been deleted</td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td colspan="2">The unique numerical identifier for the category</td>
+  </tr>
+  <tr>
+    <td>created_at</td>
+    <td colspan="2">The date and time that the category was created</td>
+  </tr>
+  <tr>
+    <td>updated_at</td>
+    <td colspan="2">The date and time that the category information was updated</td>
+  </tr>
+  <tr>
+    <td>Category_name</td>
+    <td colspan="2">Name of the category displayed to the visitors</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td colspan="2">The unique url path that visitors use to view the category</td>
+  </tr>
+  <tr>
+    <td>Parent_id</td>
+    <td colspan="2">The unique identifier of the parent category. If there is no parent category,
+then this value is set to NULL.
+	</td>
   </tr>
 </table>
 
