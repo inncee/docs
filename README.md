@@ -2,13 +2,13 @@
 This guide will be able to help walk you through on how to get started with installing Inncee onto your custom website.
 
 ### 1.1 Create Account 
-Create an account at https://beta.inncee.com. This allows our system to generate
+Create an account at https://beta.inncee.com. This allows our system to generate:
 
 -	a unique account ID
 -	a tracking script code to install on your store
--	and a secret key to allow you to authenticate the JSON sata that you can send to our API endpoints
+-	and a secret key to allow you to authenticate the JSON data that you can send to our API endpoints
 
-Once generated all this information will be sent to you via email
+Once generated all this information will be sent to you via email.
 
 Note: Ignore the pop-up that asks you to connect your store to Shopify.
 
@@ -41,10 +41,10 @@ Install these code snippets into your online store to begin tracking the followi
     <th>Code</th>
   </tr>
   <tr>
-    <td>Required.</td>
+    <td>User logged in</td>
     <td>This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in.
-    <br /><br /> It can be omitted if the user is not logged in. 
-    <br /><br /> innceeID * – Your unique account ID. 
+    <br /><br /> It can be omitted if the user is not logged in 
+    <br /><br /> innceeID * – Your unique account ID
     </td>
     <td>analytics.identify(‘USER_ID’,{ 
     <br />‘innceeID’:‘YOUR_ACCOUNT_ID’
@@ -54,8 +54,8 @@ Install these code snippets into your online store to begin tracking the followi
   <tr>
     <td>Add to cart</td>
     <td>Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button. 
-    <br /><br />innceeID * – Your unique account ID.
-    <br /><br />categoryID * - The unique ID of your category.
+    <br /><br />innceeID * – Your unique account ID
+    <br /><br />categoryID * - The unique ID of your category
     <br /><br />productID * – The unique ID of the product being added to cart variantID
     </td>
     <td>analytics.track(“addtocart”,{<br />‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
@@ -150,7 +150,7 @@ See the next section for a list of all our API end points and when you can send 
     <th>/hooks/order/create</th>
   </tr>
   <tr>
-    <td  colspan="3">Called when a new order has been created.</td>
+    <td  colspan="3">Called when a new order has been created</td>
   </tr>
   <tr>
     <th>Orders</th>
@@ -158,7 +158,7 @@ See the next section for a list of all our API end points and when you can send 
     <th>/hooks/order/create</th>
   </tr>
   <tr>
-    <td  colspan="3">Called when a new order has been created.</td>
+    <td  colspan="3">Called when a new order has been created</td>
   </tr>
   <tr>
     <td  colspan="3">
@@ -232,12 +232,12 @@ See the next section for a list of all our API end points and when you can send 
   </tr>
   <tr>
     <td>updated_at</td>
-    <td colspan="2">The date and time when the order was updated.</td> 
+    <td colspan="2">The date and time when the order was updated</td> 
   </tr>
   <tr>
     <td>fulfilled_at</td>
     <td colspan="2">The date and time when the order was fulfilled. If order is not fulfilled,
-value should be NULL.</td> 
+value should be NULL</td> 
   </tr>
   <tr>
     <td>total_price</td>
@@ -246,11 +246,11 @@ included. (value must be positive)</td>
   </tr>
   <tr>
     <td>subtotal_price</td>
-    <td colspan="2">Price of the order before shipping and taxes.</td> 
+    <td colspan="2">Price of the order before shipping and taxes</td> 
   </tr>
   <tr>
     <td>total_tax</td>
-    <td colspan="2">The sum of all the taxes applied to the order. (value must be positive)</td> 
+    <td colspan="2">The sum of all the taxes applied to the order (value must be positive)</td> 
   </tr>
   <tr>
     <td>taxes_included</td>
@@ -271,7 +271,7 @@ include “true” or “false”</td>
   </tr>
   <tr>
     <td>Order_reference</td>
-    <td colspan="2">The order reference number that the customer sees.</td> 
+    <td colspan="2">The order reference number that the customer sees</td> 
   </tr>
   <tr>
     <td>order_source</td>
@@ -298,40 +298,40 @@ not cancelled</td>
     <td colspan="2">The reason why the order was  cancelled. If the order was not cancelled, this value is "null." If the order was cancelled, the value will be one of the
 following:
 <ul>
-  <li>customer: The customer changed or cancelled the order.</li>
+  <li>customer: The customer changed or cancelled the order</li>
   <li>fraud: The order was fraudulent.</li>
-  <li>inventory: Items in the order were not in inventory.</li>
-  <li>other: The order was cancelled for a reason not in the list above.</li>
+  <li>inventory: Items in the order were not in inventory</li>
+  <li>other: The order was cancelled for a reason not in the list above</li>
 </ul>   
   </tr>
   <tr>
     <td>customer_id</td>
-    <td colspan="2">The unique numeric identifier for the customer.</td> 
+    <td colspan="2">The unique numeric identifier for the customer</td> 
   </tr>
   </tr>
   <tr>
     <td>discount_codes</td>
-    <td colspan="2">List of discount codes that can be applied to  the order. If no codes exist the value will default to blank. 
+    <td colspan="2">List of discount codes that can be applied to  the order. If no codes exist the value will default to blank
     <br /><br />A Discount code will include the following fields:
     <ul>
   <li>amount: The amount of the discount. The type field determines the
-unit of this amount.</li>
-  <li>code: The discount code.</li>
-  <li>type: The type of discount. Valid values are:
+unit of this amount</li>
+  <li>code: The discount code</li>
+  <li>type: The type of discount, valid values are:
     <ul>
     <li>fixed_amount: The default value. Applies a discount of
 amount as a unit of the store's currency. For example, if
 amount is 30 and the store's currency is USD, then 30 USD
 is deducted from the order total when the discount is
-applied.</li>
+applied</li>
     <li>percentage: Applies a percentage discount of amount. For
 example, if amount is 30, then 30% of the order total will
-be deducted when the discount is applied.</li>
+be deducted when the discount is applied</li>
     <li>shipping: Applies a free shipping discount on orders that
 have a shipping rate less than or equal to amount. For
 example, if amount is 30, the discount will give the
 customer free shipping for any shipping rate that is less
-than or equal to $30.</li>
+than or equal to $30</li>
     </ul>
   </li>
 </ul>
@@ -352,7 +352,7 @@ than or equal to $30.</li>
   	<li>variant_name: the name of the product variant</li>
   	<li>brand: the name of the supplier or brand of the product</li>
   	<li>fulfillable_quantity:</li>
-  	<li>total_discount: The total discount amount applied to this line item. This value is not subtracted in the line item price.</li>
+  	<li>total_discount: The total discount amount applied to this line item. This value is not subtracted in the line item price</li>
 	</ul>  
     </td> 
   </tr>
@@ -385,7 +385,7 @@ than or equal to $30.</li>
     <th>/hooks/customers/create</th>
   </tr>
   <tr>
-    <td colspan="3">Called when a new customer account has been created.</td>
+    <td colspan="3">Called when a new customer account has been created</td>
   </tr>
   <tr>
     <th>Customers</th>
@@ -455,7 +455,7 @@ via emails. Valid values are “true” and “false”</td>
   </tr>
   <tr>
     <td>status</td>
-    <td colspan="2">The status of the customer’s account. Valid states are
+    <td colspan="2">The status of the customer’s account. Valid states are:
     <ul>
   		<li>enabled : The customer has verified their email address and created an active account</li>
   		<li>disabled: The customer has not verified their email addresses and logged into their account yet. Account is considered not active</li>
@@ -479,7 +479,7 @@ via emails. Valid values are “true” and “false”</td>
     <th>/hooks/products/create</th>
   </tr>
   <tr>
-    <td colspan="3">Called when a new product has been created.</td>
+    <td colspan="3">Called when a new product has been created</td>
   </tr>
   <tr>
     <th>Products</th>
@@ -558,7 +558,7 @@ via emails. Valid values are “true” and “false”</td>
   </tr>
   <tr>
     <td>tags</td>
-    <td colspan="2">A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.</td>
+    <td colspan="2">A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255</td>
   </tr>
   <tr>
     <td>path</td>
@@ -572,15 +572,15 @@ via emails. Valid values are “true” and “false”</td>
   <tr>
     <td>variants</td>
     <td colspan="2">A list of variant objects, each representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as "small black", "medium black", "large blue"), would be a variant. 
-    <br /><br />If your product does not have a variant, then simply create 1 variant record with the name “Default” to record the product’s SKU, price and other details.
+    <br /><br />If your product does not have a variant, then simply create 1 variant record with the name “Default” to record the product’s SKU, price and other details
     <br /><br />
     <ul>
-  <li>id: The unique numerical identifier to identify the variant.</li>
-  <li>product_id: The unique product id that the variant belongs to.</li>
+  <li>id: The unique numerical identifier to identify the variant</li>
+  <li>product_id: The unique product id that the variant belongs to</li>
   <li>name: Name of the variant</li>
   <li>price: Price of the variant</li>
   <li>sku: SKU number of the variant</li>
-  <li>inventory_quantity: Total available units of inventory available for sale.</li>
+  <li>inventory_quantity: Total available units of inventory available for sale</li>
 </ul>
     </td>
   </tr>
@@ -601,7 +601,7 @@ via emails. Valid values are “true” and “false”</td>
     <th>/hooks/category/create</th>
   </tr>
   <tr>
-    <td colspan="3">Called when a new category has been created.</td>
+    <td colspan="3">Called when a new category has been created</td>
   </tr>
   <tr>
     <th>Category</th>
@@ -661,7 +661,7 @@ via emails. Valid values are “true” and “false”</td>
   <tr>
     <td>Parent_id</td>
     <td colspan="2">The unique identifier of the parent category. If there is no parent category,
-then this value is set to NULL.
+then this value is set to NULL
 	</td>
   </tr>
 </table>
@@ -732,15 +732,15 @@ then this value is set to NULL.
   </tr>
   <tr>
     <td>updated_at</td>
-    <td colspan="2">The date and timestamp that the product mapping was updated.</td>
+    <td colspan="2">The date and timestamp that the product mapping was updated</td>
   </tr>
   <tr>
     <td>category_id</td>
-    <td colspan="2">The unique numeric identifier of the category that the product is mapped to.</td>
+    <td colspan="2">The unique numeric identifier of the category that the product is mapped to</td>
   </tr>
   <tr>
     <td>product_id</td>
-    <td colspan="2">The unique numeric identifier of the product that is being mapped.</td>
+    <td colspan="2">The unique numeric identifier of the product that is being mapped</td>
   </tr>
 </table>
 
