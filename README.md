@@ -622,8 +622,8 @@ via emails. Valid values are “true” and “false”</td>
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category_name": "Android Phones",
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "/products/android-phone/AN03",
     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"parent_id": "2434435"
-     <br />&nbsp;&nbsp;&nbsp;}
-     <br />&nbsp;&nbsp;&nbsp;]
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;}
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;]
      <br />}
     </td>
   </tr>
@@ -669,3 +669,80 @@ then this value is set to NULL.
 </body>
 </html>
 
+###### CATEGORYMAP API
+
+<html>
+<body>
+
+<table>
+  <tr>
+    <th>CategoryMap</th>
+    <th>POST</th> 
+    <th>/hooks/categorymap/create</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when you add a product to a category</td>
+  </tr>
+    <tr>
+    <td colspan="3">
+    {
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;"categorymap": [
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": "2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category_id": 3424223,
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 4344542
+     <br />&nbsp;&nbsp;&nbsp;}
+     <br />&nbsp;&nbsp;&nbsp;]
+     <br />}
+    </td>
+  </tr>
+  <tr>
+    <th>CategoryMap</th>
+    <th>DELETE</th> 
+    <th>/hooks/categorymap/delete</th>
+  </tr>
+    <tr>
+    <td colspan="3">Called when a product has been removed from a category</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+    {
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;"categorymap": [
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category_id": 3424223,
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 4344542
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;}
+     <br />&nbsp;&nbsp;&nbsp;&nbsp;]
+     <br />}
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td colspan="2">The unique numeric identifier for the mapping</td>
+  </tr>
+  <tr>
+    <td>created_at</td>
+    <td colspan="2">The date and time stamp that the product was added to the category</td>
+  </tr>
+  <tr>
+    <td>updated_at</td>
+    <td colspan="2">The date and timestamp that the product mapping was updated.</td>
+  </tr>
+  <tr>
+    <td>category_id</td>
+    <td colspan="2">The unique numeric identifier of the category that the product is mapped to.</td>
+  </tr>
+  <tr>
+    <td>product_id</td>
+    <td colspan="2">The unique numeric identifier of the product that is being mapped.</td>
+  </tr>
+</table>
+
+</body>
+</html>
