@@ -31,13 +31,32 @@ you to install code snippets manually or calling our webhook end points in our a
 #### Event Setup
 Install these code snippets into your online store to begin tracking the following events.
 
-| Event | Description | Code |
-| --- | --- | ----|
-| User logged in | Required. This code block helps us to identify visitors when they arelogged in. It should be included on every public page of your website when the user has logged in.  It can be omitted if the user is not logged in. innceeID * – Your unique account ID.| analytics.identify(‘USER_ID’, {‘innceeID’:‘YOUR_ACCOUNT_ID’}); 
-| Add to cart` | Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button. innceeID * – Your unique account ID.categoryID * - The unique ID of your category. productID * – The unique ID of theproduct being added to cart variantID  |  analytics.track(“addtocart”,{‘innceeID’ : ‘YOUR_ACCOUNT_ID’,‘categoryID’: ‘yyyyy’,‘productID’: ‘ppppp’, ‘variantID’: ‘’, ‘Price’: ’12.50’, ‘Quantity’: ‘1’, ‘Currency’: ‘$’}); 
-| Checkout` | Checkout Required. This code block records the event when a user initiates a checkout. It should be included on every page that has a checkout button.   innceeID * – Your unique account ID   cartID * - A unique ID of the shopping cart being checked out  |  analytics.track(“Checkout”,{‘innceeID’ : ‘YOUR_ACCOUNT_ID’,‘cartID’ : ‘qqqqqq’});
-| Order Completed` | Required. Records the event when an order has been completed innceeID * - Your unique account ID orderID * - The unique order ID  |  analytics.track(“OrderComplete”,{‘innceeID’ : ‘YOUR_ACCOUNT_ID’,‘orderID’ : ‘xxxxxx’});
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Description</th> 
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>Required.</td>
+    <td>This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in.<br /><br /> It can be omitted if the user is not
+logged in. <br /><br /> innceeID * – Your unique account ID. </td>
+    <td>analytics.identify(‘USER_ID’, { ‘innceeID’: ‘YOUR_ACCOUNT_ID’});</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
+</body>
+</html>
 
 #### Automatically Tracked Events
 There are some events that are automatically tracked by us when you first install our script. No further actions will be required from you.
