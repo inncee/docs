@@ -42,7 +42,7 @@ Install these code snippets into your online store to begin tracking the followi
   </tr>
   <tr>
     <td>User logged in</td>
-    <td>This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in.
+    <td>This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in
     <br /><br /> It can be omitted if the user is not logged in 
     <br /><br /> innceeID * – Your unique account ID
     </td>
@@ -53,7 +53,7 @@ Install these code snippets into your online store to begin tracking the followi
   </tr>
   <tr>
     <td>Add to cart</td>
-    <td>Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button. 
+    <td>Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button
     <br /><br />innceeID * – Your unique account ID
     <br /><br />categoryID * - The unique ID of your category
     <br /><br />productID * – The unique ID of the product being added to cart variantID
@@ -113,7 +113,7 @@ For example, when a new order has been created, you can send a JSON response wit
 ###### Prerequisites
 When making API calls to our servers, you are required to first generate a HMAC and attach it to your headers along with the timestamp used to generate it.
 
-The recommended method for generating the HMAC using PHP is as follows
+The recommended method for generating the HMAC using PHP is as follows:
 
 ```$timestamp = time(); 
 $secret = YOUR_SHARED_SECRET;
@@ -122,7 +122,7 @@ $message = "store=".$domain."&timestamp=".$timestamp;
 $hmac = base64_encode(hash_hmac('sha256', $message, $secret, true));
 ```
 
-When making calls to our servers, attach the timestamp as a URL parameter
+When making calls to our servers, attach the timestamp as a URL parameter.
 ```
 $ch = curl_init();
 $url = "https://api.inncee.com/hooks/order/
