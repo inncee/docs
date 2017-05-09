@@ -281,9 +281,92 @@ Mobile refers to orders that originated from a native app</td>
   <tr>
     <td>order_status</td>
     <td colspan="2">Status of the order. Valid values include
-    <br />- open – For orders that have not been fulfilled
-    <br />- closed – For orders that have been fulfilled and completed
-    <br />- cancelled – For orders that have been cancelled</td> 
+    <ul>
+  <li>open – For orders that have not been fulfilled</li>
+  <li>closed – For orders that have been fulfilled and completed</li>
+  <li>cancelled – For orders that have been cancelled</li>
+</ul>  
+    </td> 
+  </tr>
+  <tr>
+    <td>cancelled_at</td>
+    <td colspan="2">The date and time when the order was cancelled. Value is NULL if order is
+not cancelled</td> 
+  </tr>
+  <tr>
+    <td>cancel_reason</td>
+    <td colspan="2">The reason why the order was  cancelled. If the order was not cancelled, this value is "null." If the order was cancelled, the value will be one of the
+following:
+<ul>
+  <li>customer: The customer changed or cancelled the order.</li>
+  <li>fraud: The order was fraudulent.</li>
+  <li>inventory: Items in the order were not in inventory.</li>
+  <li>other: The order was cancelled for a reason not in the list above.</li>
+</ul>   
+  </tr>
+  <tr>
+    <td>customer_id</td>
+    <td colspan="2">The unique numeric identifier for the customer.</td> 
+  </tr>
+  </tr>
+  <tr>
+    <td>discount_codes</td>
+    <td colspan="2">List of discount codes that can be applied to  the order. If no codes exist the value will default to blank. 
+    <br /><br />A Discount code will include the following fields:
+    <ul>
+  <li>amount: The amount of the discount. The type field determines the
+unit of this amount.</li>
+  <li>code: The discount code.</li>
+  <li>type: The type of discount. Valid values are:
+    <ul>
+    <li>fixed_amount: The default value. Applies a discount of
+amount as a unit of the store's currency. For example, if
+amount is 30 and the store's currency is USD, then 30 USD
+is deducted from the order total when the discount is
+applied.</li>
+    <li>percentage: Applies a percentage discount of amount. For
+example, if amount is 30, then 30% of the order total will
+be deducted when the discount is applied.</li>
+    <li>shipping: Applies a free shipping discount on orders that
+have a shipping rate less than or equal to amount. For
+example, if amount is 30, the discount will give the
+customer free shipping for any shipping rate that is less
+than or equal to $30.</li>
+    </ul>
+  </li>
+</ul>
+    </td> 
+  </tr>
+  </tr>
+  <tr>
+    <td>line_items</td>
+    <td colspan="2">A list of line item objects, each one containing information about an item in the order. Each line_item object has the following properties:
+    <ul>
+  	<li>line_item_id: the unique numerical identifier of the line item</li>
+  	<li>product_id: the unique numerical identifier of the product</li>
+  	<li>variant_id: the unique numerical identifier of the product variant</li>
+  	<li>product_name: the name of the product</li>
+  	<li>quantity: the quantity ordered by the customer</li>
+  	<li>price: the price of the product ordered</li>
+  	<li>sku: A unique identifier of the product for fulfillment</li>
+  	<li>variant_name: the name of the product variant</li>
+  	<li>brand: the name of the supplier or brand of the product</li>
+  	<li>fulfillable_quantity:</li>
+  	<li>total_discount: The total discount amount applied to this line item. This value is not subtracted in the line item price.</li>
+	</ul>  
+    </td> 
+  </tr>
+  </tr>
+  <tr>
+    <td>refunds</td>
+    <td colspan="2">List of refunds applied to the order. If no refunds exists, the value will default to blank
+    <br /><br />Each refund object has the following properties:
+    <ul>
+  		<li>created_at: the date and time that the refund was created</li>
+  		<li>adjustment:</li>
+  		<li>tax_adjustment:</li>
+	</ul>  
+    </td> 
   </tr>
 </table>
 
