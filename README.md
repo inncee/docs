@@ -137,6 +137,12 @@ Orders | POST | /hooks/order/create |
 }
 ```
 
+<table>
+    <tr>
+        <td>Foo</td>
+    </tr>
+</table>
+
 |Orders | DELETE | /hooks/order/{#orderid}/delete
 | --- | --- | ----|
 Called when an order has been marked for deletion.|||
