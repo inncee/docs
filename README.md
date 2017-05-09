@@ -372,3 +372,98 @@ than or equal to $30.</li>
 
 </body>
 </html>
+
+###### CUSTOMER API 
+
+<html>
+<body>
+
+<table>
+  <tr>
+    <th>Customers</th>
+    <th>POST</th> 
+    <th>/hooks/customers/create</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a new customer account has been created.</td>
+  </tr>
+  <tr>
+    <th>Customers</th>
+    <th>POST</th> 
+    <th>/hooks/customers/create</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a customer account has been updated</td>
+  </tr>
+    <tr>
+    <td colspan="3">
+    {
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;"customers": [
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 543213,
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at":
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"accepts_marketing": true,
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"city": "Ottawa",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"province": "Ontario",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"country": "Canada",
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"status": "enabled"
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;}]
+    <br />}
+    </td>
+  </tr>
+  <tr>
+    <th>Customers</th>
+    <th>DELETE</th> 
+    <th>/hooks/customers/{#customerid}/delete</th>
+  </tr>
+  <tr>
+    <td colspan="3">Called when a customer account has been deleted</td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td colspan="2">The unique numerical identifier for the customer</td>
+  </tr>
+  <tr>
+    <td>created_at</td>
+    <td colspan="2">The date and time that the customer was created</td>
+  </tr>
+  <tr>
+    <td>updated_at</td>
+    <td colspan="2">Date and time that the customer’s information was updated</td>
+  </tr>
+  <tr>
+    <td>accepts_marketing</td>
+    <td colspan="2">Indicates whether the customer has consented to be sent marketing materials
+via emails. Valid values are “true” and “false”</td>
+  </tr>
+  <tr>
+    <td>city</td>
+    <td colspan="2">The customer’s city</td>
+  </tr>
+  <tr>
+    <td>province</td>
+    <td colspan="2">The customer’s province</td>
+  </tr>
+  <tr>
+    <td>country</td>
+    <td colspan="2">The customer’s country</td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td colspan="2">The status of the customer’s account. Valid states are
+    <ul>
+  		<li>enabled : The customer has verified their email address and created an active account</li>
+  		<li>disabled: The customer has not verified their email addresses and logged into their account yet. Account is considered not active</li>
+	</ul>  
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
