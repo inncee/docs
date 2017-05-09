@@ -27,6 +27,4 @@ For our platform to be able to analyze your data and look for information, we ne
 Some events are automatically tracked while others requires you to install code snippets manually or calling our webhook end points in our app to send data to us.
 
 
-|this|is  |a|test|table|
-|----|----|-|----|-----|
-|am i|able|to|generate|this|
+
