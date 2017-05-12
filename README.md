@@ -47,10 +47,12 @@ Install these code snippets into your online store to begin tracking the followi
     <br /><br /> innceeID * – Your unique account ID
     </td>
     <td>
+    <pre>
     <code>analytics.identify(‘USER_ID’,{ 
     ‘innceeID’:‘YOUR_ACCOUNT_ID’
     });
     </code>
+    </pre>
     </td>
   </tr>
   <tr>
