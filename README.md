@@ -49,10 +49,7 @@ Install these code snippets into your online store to begin tracking the followi
     <td>
     <pre>
     <code>
-    analytics.identify(
-    '<USER_ID>',
-    {'innceeID':'<YOUR_ACCOUNT_ID>'}
-);
+    analytics.identify('&lt;USER_ID&gt;',{'innceeID':'&lt;YOUR_ACCOUNT_ID&gt;'});
     </code>
     </pre>
     </td>
@@ -174,53 +171,9 @@ See the next section for a list of all our API end points and when you can send 
   </tr>
   <tr>
     <td  colspan="3">
-    <br />{"orders": [
-    <br />{
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"id": 12345667,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"created_at": "2017-02-08T14:56:07-05:00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"fulfilled_at": null,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"total_price": "199.00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"subtotal_price": "199.00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"total_tax": "0.00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"taxes_included": false,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"currency": "SGD",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"total_discounts": "0.00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"total_line_items_price": "199.00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"order_reference": "#1002",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"order_source": "web",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"order_status": "open",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"cancelled_at": NULL,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"cancel_reason": NULL,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"customer_id": 1244345,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"discount_codes": [
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;],
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"line_items": [
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"line_item_id": 1071823175,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 447654529,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"variant_id": 12133424,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_name": "IPod Touch 8GB",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"quantity": 1,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price": "199.00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sku": "IPOD2009BLACK",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"variant_name": "Black",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"brand": "Apple",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fulfillable_quantity": 1,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"total_discount": "0.00"
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;], 
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;"refunds": [
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": “”,
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"adjustment": "-3.50",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"tax_adjustment": "-1.00",
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"quantity": "2"
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;]
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;}
-    <br /> &nbsp; &nbsp; &nbsp; &nbsp;]
-    <br /> &nbsp; &nbsp;}
+    <code>
+    
+    </code>
     </td>
   </tr>
   <tr>
