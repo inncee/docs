@@ -48,9 +48,11 @@ Install these code snippets into your online store to begin tracking the followi
     </td>
     <td>
     <pre>
-    <code>analytics.identify(‘USER_ID’,{ 
-    ‘innceeID’:‘YOUR_ACCOUNT_ID’
-    });
+    <code>
+    analytics.identify(
+    '<USER_ID>',
+    {'innceeID':'<YOUR_ACCOUNT_ID>'}
+);
     </code>
     </pre>
     </td>
