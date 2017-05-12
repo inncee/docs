@@ -46,9 +46,11 @@ Install these code snippets into your online store to begin tracking the followi
     <br /><br /> It can be omitted if the user is not logged in 
     <br /><br /> innceeID * – Your unique account ID
     </td>
-    <td>analytics.identify(‘USER_ID’,{ 
-    <br />‘innceeID’:‘YOUR_ACCOUNT_ID’
-    <br />});
+    <td>
+    <code>analytics.identify(‘USER_ID’,{ 
+    ‘innceeID’:‘YOUR_ACCOUNT_ID’
+    });
+    </code>
     </td>
   </tr>
   <tr>
