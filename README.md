@@ -52,7 +52,7 @@ Install these code snippets into your online store to begin tracking the followi
     analytics.identify(
     	'&lt;USER_ID&gt;',
 	{'innceeID':'&lt;YOUR_ACCOUNT_ID&gt;'}
-	);
+    );
     </code>
     </pre>
     </td>
