@@ -50,9 +50,8 @@ Install these code snippets into your online store to begin tracking the followi
     <pre>
     <code>
     analytics.identify(
-    	'&lt;USER_ID&gt;',
-	{'innceeID':'&lt;YOUR_ACCOUNT_ID&gt;'}
-    );
+    '&lt;USER_ID&gt;',{'innceeID':
+    '&lt;YOUR_ACCOUNT_ID&gt;'});
     </code>
     </pre>
     </td>
@@ -64,14 +63,21 @@ Install these code snippets into your online store to begin tracking the followi
     <br /><br />categoryID * - The unique ID of your category
     <br /><br />productID * – The unique ID of the product being added to cart variantID
     </td>
-    <td>analytics.track(“addtocart”,{<br />‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
-    <br />&nbsp;&nbsp;‘categoryID’: ‘yyyyy’,
-    <br />&nbsp;&nbsp;‘productID’:‘ppppp’,
-    <br />&nbsp;&nbsp;‘variantID’: ‘’,
-    <br />&nbsp;&nbsp;‘Price’: ’12.50’,
-    <br />&nbsp;&nbsp;‘Quantity’: ‘1’,
-    <br />&nbsp;&nbsp;‘Currency’: ‘$’
-    <br />});
+    <td>
+    <pre>
+    <code>
+    analytics.track(
+    “addtocart”,{‘innceeID’:
+    ‘&lt;YOUR_ACCOUNT_ID&gt;’,
+    ‘categoryID’:‘&lt;yyyyy&gt;’,
+    ‘productID’:‘&lt;ppppp&gt;’,
+    ‘variantID’: ‘&lt;&gt;’,
+    ‘Price’: ’&lt;12.50&gt;’,
+    ‘Quantity’: ‘&lt;1&gt;’,
+    ‘Currency’: ‘&lt;$&gt;’}
+    );
+    </code>
+     </pre>
     </td>
   </tr>
   <tr>
@@ -80,10 +86,15 @@ Install these code snippets into your online store to begin tracking the followi
     <br /><br />innceeID * – Your unique account ID
     <br /><br />cartID * - A unique ID of the shopping cart being checked out
     </td>
-    <td>analytics.track(“Checkout”,{
-    <br />&nbsp;&nbsp;‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
-    <br />&nbsp;&nbsp;‘cartID’ : ‘qqqqqq’
-    <br />});
+    <td>
+    <pre>
+    <code>
+    analytics.identify(
+    '&lt;USER_ID&gt;',{'innceeID':
+    '&lt;YOUR_ACCOUNT_ID&gt;'}
+    );
+    </code>
+     </pre>
     </td>
   </tr>
     <tr>
@@ -92,10 +103,15 @@ Install these code snippets into your online store to begin tracking the followi
     <br /><br />innceeID * – Your unique account ID
     <br /><br />orderID * - The unique order ID
     </td>
-    <td>analytics.track(“OrderComplete”,{
-    <br />&nbsp;&nbsp;‘innceeID’ : ‘YOUR_ACCOUNT_ID’,
-    <br />&nbsp;&nbsp;‘orderID’ : ‘xxxxxx’
-    <br />});
+    <td>
+    <pre>
+    <code>
+    analytics.track(“OrderComplete”,{
+    ‘innceeID’:‘&lt;YOUR_ACCOUNT_ID&gt;’,
+    ‘orderID’:‘&lt;xxxxxx&gt;’}
+    );
+    </code>
+     </pre>
     </td>
   </tr>
 </table>
@@ -121,7 +137,8 @@ When making API calls to our servers, you are required to first generate a HMAC 
 
 The recommended method for generating the HMAC using PHP is as follows:
 
-```$timestamp = time(); 
+```
+$timestamp = time(); 
 $timestamp = time();
 $secret = YOUR_SHARED_SECRET;
 $domain = "YOUR_DOMAIN.COM";
@@ -174,9 +191,57 @@ See the next section for a list of all our API end points and when you can send 
   </tr>
   <tr>
     <td  colspan="3">
-    <code>
-    
+    <pre>
+    <code>{
+    "orders": [
+    {
+    	"id": &lt;12345667&gt;,
+    	"created_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
+    	"updated_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
+    	"fulfilled_at": &lt;null&gt;,
+    	"total_price": "&lt;199.00&gt;",
+    	"subtotal_price": "&lt;199.00&gt;",
+    	"total_tax": "&lt;0.00&gt;",
+    	"taxes_included": &lt;false&gt;,
+    	"currency": "&lt;SGD&gt;",
+    	"total_discounts": "&lt;0.00&gt;",
+    	"total_line_items_price": "&lt;199.00&gt;",
+    	"order_reference": "&lt;#1002&gt;",
+    	"order_source": "&lt;web&gt;",
+    	"order_status": "&lt;open&gt;",
+    	"cancelled_at": &lt;NULL&gt;,
+    	"cancel_reason": &lt;NULL&gt;,
+    	"customer_id": &lt;1244345&gt;,
+    	"discount_codes": [
+    	],
+    		"line_items": [
+            {
+            	"line_item_id": &lt;1071823175&gt;,
+                "product_id": &lt;447654529&gt;,
+                "variant_id": &lt;12133424&gt;,
+                "product_name": "&lt;IPod Touch 8GB&gt;",
+                "quantity": &lt;1&gt;,
+                "price": "&lt;199.00&gt;",
+                "sku": "&lt;IPOD2009BLACK&gt;",
+                "variant_name": "&lt;Black&gt;",
+                "brand": "&lt;Apple&gt;",
+                "fulfillable_quantity": &lt;1&gt;,
+                "total_discount": "&lt;0.00&gt;"
+    		}
+            ],
+            "refunds": [
+            {
+            "created_at": “&lt;&gt;”,
+            "adjustment": "&lt;-3.50&gt;",
+            "tax_adjustment": "&lt;-1.00&gt;",
+            "quantity": "&lt;2&gt;"
+            }
+            ]
+    }
+    ]
+}
     </code>
+    </pre>
     </td>
   </tr>
   <tr>
@@ -275,8 +340,7 @@ following:
   <tr>
     <td>customer_id</td>
     <td colspan="2">The unique numeric identifier for the customer</td> 
-  </tr>
-  </tr>
+    </tr>
   <tr>
     <td>discount_codes</td>
     <td colspan="2">List of discount codes that can be applied to  the order. If no codes exist the value will default to blank
@@ -305,7 +369,6 @@ than or equal to $30</li>
 </ul>
     </td> 
   </tr>
-  </tr>
   <tr>
     <td>line_items</td>
     <td colspan="2">A list of line item objects, each one containing information about an item in the order. Each line_item object has the following properties:
@@ -323,8 +386,7 @@ than or equal to $30</li>
   	<li>total_discount: The total discount amount applied to this line item. This value is not subtracted in the line item price</li>
 	</ul>  
     </td> 
-  </tr>
-  </tr>
+    </tr>
   <tr>
     <td>refunds</td>
     <td colspan="2">List of refunds applied to the order. If no refunds exists, the value will default to blank
@@ -365,19 +427,24 @@ than or equal to $30</li>
   </tr>
     <tr>
     <td colspan="3">
+    <pre>
+    <code>
     {
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;"customers": [
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 543213,
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at":"2017-02-08T14:56:07-05:00",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"accepts_marketing": true,
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"city": "Ottawa",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"province": "Ontario",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"country": "Canada",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"status": "enabled"
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;}]
-    <br />}
+    	"customers": [
+        {
+        	"id": &lt;543213&gt;,
+            "created_at":"&lt;2017-02-08T14:56:07-05:00&gt;",
+            "updated_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
+            "accepts_marketing": &lt;true&gt;,
+            "city": "&lt;Ottawa&gt;",
+            "province": "&lt;Ontario&gt;",
+            "country": "&lt;Canada&gt;,
+            "status": "&lt;enabled&gt;"
+    	}
+        ]
+    }
+    </code>
+    </pre>
     </td>
   </tr>
   <tr>
@@ -458,38 +525,43 @@ via emails. Valid values are “true” and “false”</td>
   </tr>
     <tr>
     <td colspan="3">
+    <pre>
+    <code>
     {
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;"products": [
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465,
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": "2017-02-08T14:56:07-05:00",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_name": "IPod Touch 8GB",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"brand": "Apple",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"tags": "music, device, white",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "product/android-phone/lenovo-a1000-hitam-/0889800170294",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"image_url": "https://api.oktagon.co.id/core/images/product /ZTE%20Kis%203%20V8118w%20Biru.jpg",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"variants": [
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 123454534,
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 3245465,
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "8G",
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price": "128.00",
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sku": "IPOD2008PINK",
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"inventory_quantity": null
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 123454534,
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 3245465,
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "16G",
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price": "128.00",
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sku": "IPOD2008PINK",
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"inventory_quantity": null
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
-     <br />}
+    	"products": [
+        {
+        	"id": &lt;3245465,
+            "created_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
+            "updated_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
+            "product_name": "&lt;IPod Touch 8GB&gt;",
+            "brand": "&lt;Apple&gt;",
+            "tags": "&lt;music, device, white&gt;",
+            "path": "&lt;product/android-phone/lenovo-a1000-hitam-/0889800170294&gt;",
+            "image_url": "&lt;https://api.oktagon.co.id/core/images/product /ZTE%20Kis%203%20V8118w%20Biru.jpg&gt;",
+            "variants": 
+            	[
+                	{
+                    	"id": &lt;123454534&gt;,
+                        "product_id": &lt;3245465&gt;,
+                        "name": "&lt;8G&gt;",
+                        "price": "&lt;128.00&gt;",
+                        "sku": "&lt;IPOD2008PINK&gt;",
+                        "inventory_quantity": &lt;null&gt;
+            		},
+                    {
+                    	"id": &lt;123454534&gt;,
+                        "product_id": &lt;3245465&gt;,
+                        "name": "&lt;16G&gt;",
+                        "price": "&lt;128.00&gt;",
+                        "sku": "&lt;IPOD2008PINK&gt;",
+                        "inventory_quantity": &lt;null&gt;
+     				}
+     			]
+     	}
+     	]
+     }
+     </code>
+     </pre>
     </td>
   </tr>
   <tr>
@@ -580,18 +652,22 @@ via emails. Valid values are “true” and “false”</td>
   </tr>
     <tr>
     <td colspan="3">
+    <pre>
+    <code>
     {
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;"categories": [
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465,
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": "2017-02-08T14:56:07-05:00",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category_name": "Android Phones",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"path": "/products/android-phone/AN03",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"parent_id": "2434435"
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;}
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;]
-     <br />}
+    	"categories": [
+        {
+        "id": &lt;3245465&gt;,
+        "created_at": "&lt;2017-02-08T14:56:07-05:00"&gt;,
+        "updated_at": "&lt;2017-02-08T14:56:07-05:00"&gt;,
+        "category_name": "&lt;Android Phones"&gt;,
+        "path": "&lt;/products/android-phone/AN03"&gt;,
+        "parent_id": "&lt;2434435&gt;"
+        }
+        ]
+    }
+    </code>
+    </pre>
     </td>
   </tr>
   <tr>
@@ -652,17 +728,21 @@ then this value is set to NULL
   </tr>
     <tr>
     <td colspan="3">
+    <pre>
+    <code>
     {
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;"categorymap": [
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"created_at": "2017-02-08T14:56:07-05:00",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"updated_at": "2017-02-08T14:56:07-05:00",
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category_id": 3424223,
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 4344542
-     <br />&nbsp;&nbsp;&nbsp;}
-     <br />&nbsp;&nbsp;&nbsp;]
-     <br />}
+    "categorymap": [
+    {
+    	"id": &lt; 3245465&gt;
+        "created_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
+        "updated_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
+        "category_id": &lt; 3424223&gt;,
+        "product_id": &lt;4344542&gt;
+        }
+        ]
+     }
+     </code>
+     </pre>
     </td>
   </tr>
   <tr>
@@ -675,15 +755,19 @@ then this value is set to NULL
   </tr>
   <tr>
     <td colspan="3">
+    <pre>
+    <code>
     {
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;"categorymap": [
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;{
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 3245465
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category_id": 3424223,
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"product_id": 4344542
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;}
-     <br />&nbsp;&nbsp;&nbsp;&nbsp;]
-     <br />}
+    	"categorymap": [
+        {
+        	"id": &lt;3245465&gt;
+            "category_id": &lt;3424223&gt;,
+            "product_id": &lt;4344542&gt;
+            }
+            ]
+    }
+    </code>
+     </pre>
     </td>
   </tr>
   <tr>
