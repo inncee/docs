@@ -8,11 +8,11 @@ This guide will be able to help walk you through on how to get started with inst
 	* [Automatically Tracked Events](https://github.com/inncee/docs#automatically-tracked-events)
 	* [Backend Events](https://github.com/inncee/docs#backend-events)
 	* [Prerequisites](https://github.com/inncee/docs#prerequisites)
-	* [ORDERS API](https://github.com/inncee/docs#orders-api)
-	* [CUSTOMER API](https://github.com/inncee/docs#customer-api)
-	* [PRODUCTS API](https://github.com/inncee/docs#products-api)
-	* [CATEGORY API](https://github.com/inncee/docs#category-api)
-	* [CATEGORYMAP API](https://github.com/inncee/docs#categorymap-api)
+	* [Orders API](https://github.com/inncee/docs#orders-api)
+	* [Customer API](https://github.com/inncee/docs#customer-api)
+	* [Products API](https://github.com/inncee/docs#products-api)
+	* [Category API](https://github.com/inncee/docs#category-api)
+	* [Categorymap API](https://github.com/inncee/docs#categorymap-api)
 
 ### 1.1 Create Account 
 Create an account at https://beta.inncee.com. This allows our system to generate:
