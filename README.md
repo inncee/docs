@@ -3,6 +3,8 @@ This guide will be able to help walk you through on how to get started with inst
 
 * [1.1 Create Account](https://github.com/inncee/docs#11-create-account)
 * [1.2 Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
+* [1.3 Tracking Events](https://github.com/inncee/docs#13-teacking-events)
+* [Event Setup]
 
 ### 1.1 Create Account 
 Create an account at https://beta.inncee.com. This allows our system to generate:
@@ -19,12 +21,32 @@ Note: Ignore the pop-up that asks you to connect your store to Shopify.
 You will need to install our tracking script library after the opening of the <head> tag found in every
 page of your website.
 
-
 `<script type=”text/javascript”
 src=”https://shopify.inncee.com/tracker/YOUR_ACCOUNT_ID?shop=YOUR_STORE_URL”></script>`
 
-
 Once the script has been installed, you’ll be able to start recording events on your website.
+
+How to install Inncee’s tracking script in your Shopify Store
+
+To allow us to begin tracking your visitor activity in your store, we’ll need you to embed our tracking script file in your theme. 
+By placing it near the top of the <head> tags in your theme file, it will help us to accuratly track when a visitor takes an action in your store.
+Follow the steps below to begin your installation.
+
+1) Log in to your shopify store’s admin panel
+2) Click on the “Online Store” > “Themes” in your main menu
+3) Click on the Three Dots icon to open up the menu, and click on the “Edit HTML/CSS” link
+
+	![Tracking Image](https://raw.githubusercontent.com/inncee/docs/master/Tracking_picture_1.bmp)
+
+4) Select the “theme.liquid” file under your “Layout” folder to load it up on your screen. In the “theme.liquid” file, you should be able see the <head> tag near the top of the file
+
+	![Tracking Image 2](https://raw.githubusercontent.com/inncee/docs/master/Tracking_picture_2.bmp)
+
+5) Paste the your script file codes after the the <title> tags (you should find them a couple of lines down from the <head> tag) Please make sure that you code is pasted only after the closing </title> tag.
+
+	![Tracking Image 3](https://raw.githubusercontent.com/inncee/docs/master/Tracking_picture_3.bmp)
+
+6) Click the “Save” button and you’re done!
 
 ### 1.3 Tracking Events
 For our platform to be able to analyze your data and look for information, we need to be able to record
