@@ -4,7 +4,6 @@ This guide will be able to help walk you through on how to get started with inst
 * [1.1 Create Account](https://github.com/inncee/docs#11-create-account)
 * [1.2 Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
 * [1.3 Tracking Events](https://github.com/inncee/docs#13-teacking-events)
-* [Event Setup]
 
 ### 1.1 Create Account 
 Create an account at https://beta.inncee.com. This allows our system to generate:
