@@ -3,7 +3,16 @@ This guide will be able to help walk you through on how to get started with inst
 
 * [1.1 Create Account](https://github.com/inncee/docs#11-create-account)
 * [1.2 Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
-* [1.3 Tracking Events](https://github.com/inncee/docs#13-teacking-events)
+* [1.3 Tracking Events](https://github.com/inncee/docs#13-tracking-events)
+	* [Event Setup](https://github.com/inncee/docs#event-setup)
+	* [Automatically Tracked Events](https://github.com/inncee/docs#automatically-tracked-events)
+	* [Backend Events](https://github.com/inncee/docs#backend-events)
+	* [Prerequisites](https://github.com/inncee/docs#prerequisites)
+	* [ORDERS API](https://github.com/inncee/docs#orders-api)
+	* [CUSTOMER API](https://github.com/inncee/docs#customer-api)
+	* [PRODUCTS API](https://github.com/inncee/docs#products-api)
+	* [CATEGORY API](https://github.com/inncee/docs#category-api)
+	* [CATEGORYMAP API](https://github.com/inncee/docs#categorymap-api)
 
 ### 1.1 Create Account 
 Create an account at https://beta.inncee.com. This allows our system to generate:
@@ -43,7 +52,7 @@ Follow the steps below to begin your installation.
 
 5) Paste the your script file codes after the the <title> tags (you should find them a couple of lines down from the <head> tag) Please make sure that you code is pasted only after the closing </title> tag.
 
-	![Tracking Image 3](https://raw.githubusercontent.com/inncee/docs/master/Tracking_picture_3.bmp)
+	![Tracking Image 3]()
 
 6) Click the “Save” button and you’re done!
 
