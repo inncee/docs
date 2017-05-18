@@ -752,7 +752,7 @@ then this value is set to NULL
 
 <table  width="100%">
   <tr>
-    <th> width="15%"CategoryMap</th>
+    <th width="15%">CategoryMap</th>
     <th width="15%">POST</th> 
     <th width="70%">/hooks/categorymap/create</th>
   </tr>
