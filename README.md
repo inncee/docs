@@ -754,7 +754,7 @@ then this value is set to NULL
   <tr>
     <th>CategoryMap</th>
     <th>POST</th> 
-    <th width="65%">/hooks/categorymap/create</th>
+    <th width="99%">/hooks/categorymap/create</th>
   </tr>
   <tr>
     <td colspan="3">Called when you add a product to a category</td>
