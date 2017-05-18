@@ -1,9 +1,9 @@
 # Installation and Setup
 This guide will be able to help walk you through on how to get started with installing Inncee onto your custom website.
 
-* [1.1 Create Account](https://github.com/inncee/docs#11-create-account)
-* [1.2 Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
-* [1.3 Tracking Events](https://github.com/inncee/docs#13-tracking-events)
+* [Create Account](https://github.com/inncee/docs#11-create-account)
+* [Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
+* [Tracking Events](https://github.com/inncee/docs#13-tracking-events)
 * [Event Setup](https://github.com/inncee/docs#event-setup)
 * [Automatically Tracked Events](https://github.com/inncee/docs#automatically-tracked-events)
 * [Backend Events](https://github.com/inncee/docs#backend-events)
@@ -14,7 +14,7 @@ This guide will be able to help walk you through on how to get started with inst
 * [CATEGORY API](https://github.com/inncee/docs#category-api)
 * [CATEGORYMAP API](https://github.com/inncee/docs#categorymap-api)
 
-### 1.1 Create Account 
+#### Create Account 
 Create an account at https://beta.inncee.com. This allows our system to generate:
 
 -	a unique account ID
@@ -25,7 +25,7 @@ Once generated all this information will be sent to you via email.
 
 Note: Ignore the pop-up that asks you to connect your store to Shopify.
 
-### 1.2 Install your tracking script
+#### Install your tracking script
 You will need to install our tracking script library after the opening of the <head> tag found in every
 page of your website.
 
@@ -56,7 +56,7 @@ Follow the steps below to begin your installation.
 
 6) Click the “Save” button and you’re done!
 
-### 1.3 Tracking Events
+#### Tracking Events
 For our platform to be able to analyze your data and look for information, we need to be able to record
 events that happened on your website. Some events are automatically tracked while others requires
 you to install code snippets manually or calling our webhook end points in our app to send data to us.
