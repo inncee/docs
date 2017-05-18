@@ -174,8 +174,8 @@ The recommended method for generating the HMAC using PHP is as follows:
 ```
 $timestamp = time(); 
 $timestamp = time();
-$secret = YOUR_SHARED_SECRET;
-$domain = "YOUR_DOMAIN.COM";
+$secret = <OUR_SHARED_SECRET>;
+$domain = "<OUR_DOMAIN.COM>";
 
 $message = "store=".$domain."&timestamp=".$timestamp;
 $hmac = base64_encode(hash_hmac('sha256', $message, $secret, true));
