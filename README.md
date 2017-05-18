@@ -102,12 +102,12 @@ Install these code snippets into your online store to begin tracking the followi
     analytics.track(
     “addtocart”,{‘innceeID’:
     ‘&lt;YOUR_ACCOUNT_ID&gt;’,
-    ‘categoryID’:‘&lt;yyyyy&gt;’,
-    ‘productID’:‘&lt;ppppp&gt;’,
-    ‘variantID’: ‘&lt;&gt;’,
-    ‘Price’: ’&lt;12.50&gt;’,
-    ‘Quantity’: ‘&lt;1&gt;’,
-    ‘Currency’: ‘&lt;$&gt;’}
+    ‘categoryID’:‘yyyyy’,
+    ‘productID’:‘ppppp’,
+    ‘variantID’: ‘’,
+    ‘Price’: ’12.50’,
+    ‘Quantity’: ‘1’,
+    ‘Currency’: ‘$’}
     );
     </code>
      </pre>
@@ -124,7 +124,8 @@ Install these code snippets into your online store to begin tracking the followi
     <code>
     analytics.identify(
     '&lt;USER_ID&gt;',{'innceeID':
-    '&lt;YOUR_ACCOUNT_ID&gt;'}
+    '&lt;YOUR_ACCOUNT_ID&gt;,
+    ‘cartID’ : ‘qqqqqq’}
     );
     </code>
      </pre>
@@ -141,7 +142,7 @@ Install these code snippets into your online store to begin tracking the followi
     <code>
     analytics.track(“OrderComplete”,{
     ‘innceeID’:‘&lt;YOUR_ACCOUNT_ID&gt;’,
-    ‘orderID’:‘&lt;xxxxxx&gt;’}
+    ‘orderID’:‘xxxxxx’}
     );
     </code>
      </pre>
@@ -228,46 +229,46 @@ See the next section for a list of all our API end points and when you can send 
     <code>{
     "orders": [
     {
-    	"id": &lt;12345667&gt;,
-    	"created_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
-    	"updated_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
-    	"fulfilled_at": &lt;null&gt;,
-    	"total_price": "&lt;199.00&gt;",
-    	"subtotal_price": "&lt;199.00&gt;",
-    	"total_tax": "&lt;0.00&gt;",
-    	"taxes_included": &lt;false&gt;,
-    	"currency": "&lt;SGD&gt;",
-    	"total_discounts": "&lt;0.00&gt;",
-    	"total_line_items_price": "&lt;199.00&gt;",
-    	"order_reference": "&lt;#1002&gt;",
-    	"order_source": "&lt;web&gt;",
-    	"order_status": "&lt;open&gt;",
-    	"cancelled_at": &lt;NULL&gt;,
-    	"cancel_reason": &lt;NULL&gt;,
-    	"customer_id": &lt;1244345&gt;,
+    	"id": 12345667,
+    	"created_at": "2017-02-08T14:56:07-05:00",
+    	"updated_at": "2017-02-08T14:56:07-05:00",
+    	"fulfilled_at": null,
+    	"total_price": "199.00",
+    	"subtotal_price": "199.00",
+    	"total_tax": "0.00",
+    	"taxes_included": false,
+    	"currency": "SGD",
+    	"total_discounts": "0.00",
+    	"total_line_items_price": "199.00",
+    	"order_reference": "#1002",
+    	"order_source": "web",
+    	"order_status": "open",
+    	"cancelled_at": NULL,
+    	"cancel_reason": NULL,
+    	"customer_id": 1244345,
     	"discount_codes": [
     	],
     		"line_items": [
             {
-            	"line_item_id": &lt;1071823175&gt;,
-                "product_id": &lt;447654529&gt;,
-                "variant_id": &lt;12133424&gt;,
-                "product_name": "&lt;IPod Touch 8GB&gt;",
-                "quantity": &lt;1&gt;,
-                "price": "&lt;199.00&gt;",
-                "sku": "&lt;IPOD2009BLACK&gt;",
-                "variant_name": "&lt;Black&gt;",
-                "brand": "&lt;Apple&gt;",
-                "fulfillable_quantity": &lt;1&gt;,
-                "total_discount": "&lt;0.00&gt;"
+            	"line_item_id": 1071823175,
+                "product_id": 447654529,
+                "variant_id": 12133424,
+                "product_name": "IPod Touch 8GB",
+                "quantity": 1,
+                "price": "199.00",
+                "sku": "IPOD2009BLACK,
+                "variant_name": "Black",
+                "brand": "Apple",
+                "fulfillable_quantity": 1,
+                "total_discount": "0.00"
     		}
             ],
             "refunds": [
             {
-            "created_at": “&lt;&gt;”,
-            "adjustment": "&lt;-3.50&gt;",
-            "tax_adjustment": "&lt;-1.00&gt;",
-            "quantity": "&lt;2&gt;"
+            "created_at": “”,
+            "adjustment": "-3.50",
+            "tax_adjustment": "-1.00",
+            "quantity": "2"
             }
             ]
     }
@@ -465,14 +466,14 @@ than or equal to $30</li>
     {
     	"customers": [
         {
-        	"id": &lt;543213&gt;,
-            "created_at":"&lt;2017-02-08T14:56:07-05:00&gt;",
-            "updated_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
-            "accepts_marketing": &lt;true&gt;,
-            "city": "&lt;Ottawa&gt;",
-            "province": "&lt;Ontario&gt;",
-            "country": "&lt;Canada&gt;,
-            "status": "&lt;enabled&gt;"
+        	"id": 543213,
+            "created_at":"2017-02-08T14:56:07-05:00",
+            "updated_at": "2017-02-08T14:56:07-05:00",
+            "accepts_marketing": true,
+            "city": "Ottawa",
+            "province": "Ontario",
+            "country": "Canada,
+            "status": "enabled"
     	}
         ]
     }
@@ -564,30 +565,30 @@ via emails. Valid values are “true” and “false”</td>
     	"products": [
         {
         	"id": &lt;3245465,
-            "created_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
-            "updated_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
-            "product_name": "&lt;IPod Touch 8GB&gt;",
-            "brand": "&lt;Apple&gt;",
-            "tags": "&lt;music, device, white&gt;",
-            "path": "&lt;product/android-phone/lenovo-a1000-hitam-/0889800170294&gt;",
-            "image_url": "&lt;https://api.oktagon.co.id/core/images/product /ZTE%20Kis%203%20V8118w%20Biru.jpg&gt;",
+            "created_at": "2017-02-08T14:56:07-05:00",
+            "updated_at": "2017-02-08T14:56:07-05:00",
+            "product_name": "IPod Touch 8GB",
+            "brand": "pple",
+            "tags": "music, device, white",
+            "path": "product/android-phone/lenovo-a1000-hitam-/0889800170294",
+            "image_url": "https://api.oktagon.co.id/core/images/product /ZTE%20Kis%203%20V8118w%20Biru.jpg",
             "variants": 
             	[
                 	{
-                    	"id": &lt;123454534&gt;,
-                        "product_id": &lt;3245465&gt;,
-                        "name": "&lt;8G&gt;",
-                        "price": "&lt;128.00&gt;",
-                        "sku": "&lt;IPOD2008PINK&gt;",
-                        "inventory_quantity": &lt;null&gt;
+                    	"id": 123454534,
+                        "product_id": 3245465,
+                        "name": "8G",
+                        "price": "128.00",
+                        "sku": "IPOD2008PINK",
+                        "inventory_quantity": null
             		},
                     {
-                    	"id": &lt;123454534&gt;,
-                        "product_id": &lt;3245465&gt;,
-                        "name": "&lt;16G&gt;",
-                        "price": "&lt;128.00&gt;",
-                        "sku": "&lt;IPOD2008PINK&gt;",
-                        "inventory_quantity": &lt;null&gt;
+                    	"id": 123454534,
+                        "product_id": 3245465,
+                        "name": "16G",
+                        "price": 128.00",
+                        "sku": "IPOD2008PINK",
+                        "inventory_quantity": null
      				}
      			]
      	}
@@ -690,12 +691,12 @@ via emails. Valid values are “true” and “false”</td>
     {
     	"categories": [
         {
-        "id": &lt;3245465&gt;,
-        "created_at": "&lt;2017-02-08T14:56:07-05:00"&gt;,
-        "updated_at": "&lt;2017-02-08T14:56:07-05:00"&gt;,
-        "category_name": "&lt;Android Phones"&gt;,
-        "path": "&lt;/products/android-phone/AN03"&gt;,
-        "parent_id": "&lt;2434435&gt;"
+        "id": 3245465,
+        "created_at": "2017-02-08T14:56:07-05:00",
+        "updated_at": "2017-02-08T14:56:07-05:00",
+        "category_name": "Android Phones",
+        "path": "/products/android-phone/AN03",
+        "parent_id": "2434435"
         }
         ]
     }
@@ -766,11 +767,11 @@ then this value is set to NULL
     {
     "categorymap": [
     {
-    	"id": &lt; 3245465&gt;
-        "created_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
-        "updated_at": "&lt;2017-02-08T14:56:07-05:00&gt;",
-        "category_id": &lt; 3424223&gt;,
-        "product_id": &lt;4344542&gt;
+    	"id": 3245465
+        "created_at": "2017-02-08T14:56:07-05:00",
+        "updated_at": "2017-02-08T14:56:07-05:00",
+        "category_id": 3424223,
+        "product_id": 4344542
         }
         ]
      }
@@ -793,9 +794,9 @@ then this value is set to NULL
     {
     	"categorymap": [
         {
-        	"id": &lt;3245465&gt;
-            "category_id": &lt;3424223&gt;,
-            "product_id": &lt;4344542&gt;
+        	"id": 3245465
+            "category_id": 3424223,
+            "product_id": 4344542
             }
             ]
     }
