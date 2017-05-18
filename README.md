@@ -1,9 +1,9 @@
 # Installation and Setup
 This guide will be able to help walk you through on how to get started with installing Inncee onto your custom website.
 
-* [Create Account](https://github.com/inncee/docs#11-create-account)
-* [Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
-* [Tracking Events](https://github.com/inncee/docs#13-tracking-events)
+* [1.1 Create Account](https://github.com/inncee/docs#11-create-account)
+* [1.2 Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
+* [1.3 Tracking Events](https://github.com/inncee/docs#13-tracking-events)
 * [Event Setup](https://github.com/inncee/docs#event-setup)
 * [Automatically Tracked Events](https://github.com/inncee/docs#automatically-tracked-events)
 * [Backend Events](https://github.com/inncee/docs#backend-events)
@@ -14,7 +14,7 @@ This guide will be able to help walk you through on how to get started with inst
 * [CATEGORY API](https://github.com/inncee/docs#category-api)
 * [CATEGORYMAP API](https://github.com/inncee/docs#categorymap-api)
 
-#### Create Account 
+### 1.1 Create Account 
 Create an account at https://beta.inncee.com. This allows our system to generate:
 
 -	a unique account ID
@@ -25,7 +25,7 @@ Once generated all this information will be sent to you via email.
 
 Note: Ignore the pop-up that asks you to connect your store to Shopify.
 
-#### Install your tracking script
+### 1.2 Install your tracking script
 You will need to install our tracking script library after the opening of the <head> tag found in every
 page of your website.
 
@@ -44,19 +44,19 @@ Follow the steps below to begin your installation.
 2) Click on the “Online Store” > “Themes” in your main menu
 3) Click on the Three Dots icon to open up the menu, and click on the “Edit HTML/CSS” link
 
-	![Tracking Image](https://raw.githubusercontent.com/inncee/docs/master/Tracking_picture_1.bmp)
+	![Tracking Image](https://shopify.inncee.com/images/script-edit-html-1.png)
 
 4) Select the “theme.liquid” file under your “Layout” folder to load it up on your screen. In the “theme.liquid” file, you should be able see the <head> tag near the top of the file
 
-	![Tracking Image 2](https://raw.githubusercontent.com/inncee/docs/master/Tracking_picture_2.bmp)
+	![Tracking Image 2](https://shopify.inncee.com/images/script-edit-html-2.png)
 
 5) Paste the your script file codes after the the <title> tags (you should find them a couple of lines down from the <head> tag) Please make sure that you code is pasted only after the closing </title> tag.
 
-	![Tracking Image 3]()
+	![Tracking Image 3](https://shopify.inncee.com/images/script-edit-html-3.png)
 
 6) Click the “Save” button and you’re done!
 
-#### Tracking Events
+### 1.3 Tracking Events
 For our platform to be able to analyze your data and look for information, we need to be able to record
 events that happened on your website. Some events are automatically tracked while others requires
 you to install code snippets manually or calling our webhook end points in our app to send data to us.
@@ -205,7 +205,7 @@ See the next section for a list of all our API end points and when you can send 
 <html>
 <body>
 
-<table>
+<table width="100%">
   <tr>
     <th>Orders</th>
     <th>POST</th> 
@@ -441,7 +441,7 @@ than or equal to $30</li>
 <html>
 <body>
 
-<table>
+<table  width="100%">
   <tr>
     <th>Customers</th>
     <th>POST</th> 
@@ -539,7 +539,7 @@ via emails. Valid values are “true” and “false”</td>
 <html>
 <body>
 
-<table>
+<table  width="100%">
   <tr>
     <th>Products</th>
     <th>POST</th> 
@@ -666,7 +666,7 @@ via emails. Valid values are “true” and “false”</td>
 <html>
 <body>
 
-<table>
+<table  width="100%">
   <tr>
     <th>Category</th>
     <th>POST</th> 
@@ -750,7 +750,7 @@ then this value is set to NULL
 <html>
 <body>
 
-<table>
+<table  width="100%">
   <tr>
     <th>CategoryMap</th>
     <th>POST</th> 
