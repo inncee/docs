@@ -13,18 +13,18 @@ Welcome to the Inncee Dashboard User Guide. Here you will find the various defin
 	* [Settings]
 * [The Metrics]
 
-## Store Overview
+### Store Overview
 The store overview dashboard is the first dashboard you'll see after you log in to your Inncee account. 
 
 ![Store Overview](https://shopify.inncee.com/images/dashboard/inncee-store-overview-short.png)
 
 This is where the major store metrics are presented and tracked. Information is divided into 2 tabs here. There is the "Performance" tab which contains the major store metrics relating to performance and the "Trending" tab which features products, categories and brands that are trending up in your store.
 
-### Performance
+#### Performance
 Under the "Performance" tab, you'll find the following metrics presented.
 
-* [Purchases](https://github.com) - Shows the total number of customer orders received
-* [Sales]
+* [Purchases](https://github.com) - Calculates the total number of customer orders received. Click on the link to 
+* [Sales] - The total net sales received (excludes )
 * [Units Sold]
 * [Conversion Rate]
 * [Pageviews]
@@ -32,8 +32,21 @@ Under the "Performance" tab, you'll find the following metrics presented.
 * [Visitors]
 * [Average Order Value]
 
-### Trending
+#### Trending
 The trending tab features what the current period's popular products, categories and brands are in your store. You'll be able to see what are the 
 
-### Traffic Source
+#### Traffic Source
 The traffic source dashboard allows users to analyze the performance of the traffic source as a 
+
+### Products
+
+### Categories
+
+### Brands
+
+### Action Center
+
+### Settings
+
+## The Metrics
+

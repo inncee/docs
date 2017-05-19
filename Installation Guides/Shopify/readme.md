@@ -47,7 +47,7 @@ Click on the Three Dots icon to open up the menu, and click on the “Edit HTML/
 ### 2.4 Select your theme file
 Select the “theme.liquid” file under your “Layout” folder to load it up on your screen. In the “theme.liquid” file, you should be able see the <head> tag near the top of the file
 
-![Shopify theme.liquid file](https://shopify.inncee.com/images/script-edit-html-2.png)
+![Shopify theme.liquid file](https://shopify.inncee.com/images/shopify-tracker-install-2.png)
 
 ### 2.5 Paste your tracking library script in the theme file
 Paste the your script file codes after the the <title> tags (you should find them a couple of lines down from the <head> tag) Please make sure that you code is pasted only after the closing </title> tag.
