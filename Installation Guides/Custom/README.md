@@ -184,7 +184,7 @@ We will be using the customer data as a sample to post.
 
 First, create the customer class.
 
-```
+```php
 class customer{
    public $id;
    public $created_at;
@@ -203,7 +203,7 @@ class customer{
 }
 ```
 Once the class is created, you can now populate the customers and convert into an array
-```
+```php
 $customer_array =  array();
 
 $customer = new customer('123', '2017-02-08T14:56:07-05:00'...);
@@ -225,7 +225,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
 ```
 With the curl set up, let's just prepare a few more headers and you are ready to send us the data.
 
-```
+```php
 curl_setopt(
     $ch, 
     CURLOPT_HTTPHEADER, 
@@ -237,6 +237,6 @@ curl_setopt(
 );
 ```
 Now that everything is done, all you need to do is send the data over
-```
+```php
 $output = curl_exec($ch);
 ```
