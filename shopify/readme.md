@@ -27,18 +27,26 @@ src=”https://shopify.inncee.com/tracker/YOUR_ACCOUNT_ID?shop=YOUR_STORE_URL”
 
 Once the script has been installed, we’ll be able to start recording events on your website.
 
-### 2.1 Log in to your shopify store’s admin panel
-### 2.2 Click on the “Online Store” > “Themes” in your main menu
-### 2.3 Click on the Three Dots icon to open up the menu, and click on the “Edit HTML/CSS” link
+### 2.1 Log in to your Shopify store
+You'll need to login to your Shopify store and access the admin panel.
+
+### 2.2 Navigate to your Shopify theme
+Click on the “Online Store” > “Themes” in your main menu to get to your Theme page.
+
+### 2.3 Open up your theme editor
+Click on the Three Dots icon to open up the menu, and click on the “Edit HTML/CSS” link
 
 ![Shopify Themes Page](https://shopify.inncee.com/images/script-edit-html-1.png)
 
-### 2.4 Select the “theme.liquid” file under your “Layout” folder to load it up on your screen. In the “theme.liquid” file, you should be able see the <head> tag near the top of the file
+### 2.4 Select your theme file
+Select the “theme.liquid” file under your “Layout” folder to load it up on your screen. In the “theme.liquid” file, you should be able see the <head> tag near the top of the file
 
 ![Shopify theme.liquid file](https://shopify.inncee.com/images/script-edit-html-2.png)
 
-### 2.5 Paste the your script file codes after the the <title> tags (you should find them a couple of lines down from the <head> tag) Please make sure that you code is pasted only after the closing </title> tag.
+### 2.5 Paste your tracking library script in the theme file
+Paste the your script file codes after the the <title> tags (you should find them a couple of lines down from the <head> tag) Please make sure that you code is pasted only after the closing </title> tag.
 
 ![Pasting the script into the theme file](https://shopify.inncee.com/images/script-edit-html-3.png)
 
-### 2.6 Click the “Save” button and you’re done!
+### 2.6 Click "Save"
+Click the “Save” button and you’re done!
