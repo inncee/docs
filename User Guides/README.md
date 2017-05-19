@@ -2,7 +2,10 @@
 Welcome to the Inncee Dashboard User Guide. Here you will find the various definitions of the metrics presented in the dashboard as well as suggestions on how you can use the analysis provided by Inncee. Select one of the sections below to get started.
 
 * [The Dashboards]
-	* [Store Overview]
+	* [Store Overview](https://github.com/inncee/docs/tree/master/User%20Guides#store-overview)
+		* [Performance](https://github.com/inncee/docs/tree/master/User%20Guides#performance)
+		* [Trending](https://github.com/inncee/docs/tree/master/User%20Guides#trending)
+		* [Traffic Source](https://github.com/inncee/docs/tree/master/User%20Guides#traffic-source)
 	* [Products]
 	* [Categories]
 	* [Brands]
@@ -20,7 +23,17 @@ This is where the major store metrics are presented and tracked. Information is 
 ### Performance
 Under the "Performance" tab, you'll find the following metrics presented.
 
-* [Purchases]
+* [Purchases](https://github.com) - Shows the total number of customer orders received
 * [Sales]
 * [Units Sold]
 * [Conversion Rate]
+* [Pageviews]
+* [Product Pageviews]
+* [Visitors]
+* [Average Order Value]
+
+### Trending
+The trending tab features what the current period's popular products, categories and brands are in your store. You'll be able to see what are the 
+
+### Traffic Source
+The traffic source dashboard allows users to analyze the performance of the traffic source as a 
