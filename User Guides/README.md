@@ -85,7 +85,13 @@ The metrics and charts presented in this dashboard are listed below. Click on th
 ### Products
 The products dashboard displays performance data on all the products that are currently listed in your online store. The product related information that you see in this dashboard (name, images, category information etc) are sent to our platform via our API webhooks. If you're using Shopify, the data is automatically sent over by the Inncee App that you had installed in your Shopify store. If you're using a custom platform, you'll need to send your product data to our API webhooks in order to create/update the product information in Inncee. 
 
-You can view the data in the product dashboard in 2 formats, the **Grid** view and the **Table** view. 
+#### Change display format
+You can view the data in the product dashboard using either the **Grid** view format or the **Table** view format, by clicking on the "Grid" or "Table" buttons on the top right hand corner of the dashboard.
+
+![Products Dashboard Display buttons](https://shopify.inncee.com/images/dashboard/dashboard-data-display-buttons.png)
+
+#### Exporting products data
+To export the data in the products dashboard, you can click on the "Export" button located next to the "Grid" and "Table" buttons on the top right hand corner of the dashboard.
 
 
 
