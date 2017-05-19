@@ -93,6 +93,11 @@ You can view the data in the product dashboard using either the **Grid** view fo
 #### Exporting products data
 To export the data in the products dashboard, you can click on the "Export" button located next to the "Grid" and "Table" buttons on the top right hand corner of the dashboard.
 
+![Export Data button](https://shopify.inncee.com/images/dashboard/dashboard-export-button.png)
+
+#### The products detail dashboard
+When you click on any of the products in the product dashboard, you'll be directed to another dashboard showing you the detailed analysis of the performance of the selected product.
+
 
 
 ### Categories
