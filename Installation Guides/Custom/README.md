@@ -1,13 +1,14 @@
 # Installation and Setup
 This guide will be able to help walk you through on how to get started with installing Inncee onto your custom website.
 
-* [1.1 Create Account](https://github.com/inncee/docs#11-create-account)
-* [1.2 Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
-* [1.3 Tracking Events](https://github.com/inncee/docs#13-tracking-events)
+* [1.1 Create Account](https://github.com/inncee/docs/Installation%20Guides/Custom#11-create-account)
+* [1.2 Install your tracking script](https://github.com/inncee/docs/Installation%20Guides/Custom#12-install-your-tracking-script)
+* [1.3 Tracking Events](https://github.com/inncee/docs/Installation%20Guides/Custom#13-tracking-events)
 	* [Event Setup](https://github.com/inncee/docs#event-setup)
 	* [Automatically Tracked Events](https://github.com/inncee/docs#automatically-tracked-events)
 	* [Backend Events](https://github.com/inncee/docs#backend-events)
-	* [Prerequisites](https://github.com/inncee/docs#prerequisites)
+* [1.4 Sending Backend Data via API](https://github.com/inncee/docs/Installation%20Guides/Custom#14-sending-backend-data-to-inncee)
+	* [Prerequisites](https://github.com/inncee/docs/Installation%20Guides/Custom#prerequisites)
 
 ### 1.1 Create Account 
 Create an account at https://beta.inncee.com. This allows our system to generate:
