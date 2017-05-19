@@ -179,3 +179,64 @@ Once done, you are now good to attach your data and send to our servers.
 See the next section for a list of all our API end points and when you can send data to it.
 
 
+##### Sending Data
+We will be using the customer data as a sample to post.
+
+First, create the customer class.
+
+```
+class customer{
+   public $id;
+   public $created_at;
+   public $update_at;
+   public $accepts_marketing;
+   public $city;
+   public $province;
+   public $status;
+
+
+   public function __construct ($id, $created_at...){
+       $this->id = $id;
+       $this->created_at = $created_at
+       ...
+   }
+}
+```
+Once the class is created, you can now populate the customers and convert into an array
+```
+$customer_array =  array();
+
+$customer = new customer('123', '2017-02-08T14:56:07-05:00'...);
+
+//you can also assign manually
+$customer->city = 'Singapore';
+
+//once customer is created, you can push it into an array
+array_push($customer_array , $customer);
+```
+
+When the array is completed, you can encode the array into a json and attach it to a curl call
+```
+$data = array("customer" => $customer_array);
+
+$jsonData = json_encode($data);
+
+curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+```
+With the curl set up, let's just prepare a few more headers and you are ready to send us the data.
+
+```
+curl_setopt(
+    $ch, 
+    CURLOPT_HTTPHEADER, 
+    array(
+        'Content-Type: application/json',
+        'HTTP_X_HMAC_SHA256: ' . $hmac,
+        'Content-Length: ' . strlen($data_string)
+    )
+);
+```
+Now that everything is done, all you need to do is send the data over
+```
+$output = curl_exec($ch);
+```
