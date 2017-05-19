@@ -48,7 +48,7 @@ Follow the steps below to begin your installation.
 
 4) Select the “theme.liquid” file under your “Layout” folder to load it up on your screen. In the “theme.liquid” file, you should be able see the <head> tag near the top of the file
 
-	![Tracking Image 2](https://shopify.inncee.com/images/script-edit-html-2.png)
+	![Tracking Image 2](https://shopify.inncee.com/images/shopify-tracker-install-2.png)
 
 5) Paste the your script file codes after the the <title> tags (you should find them a couple of lines down from the <head> tag) Please make sure that you code is pasted only after the closing </title> tag.
 
