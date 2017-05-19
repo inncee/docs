@@ -25,7 +25,7 @@ Note: Ignore the pop-up that asks you to connect your store to Shopify.
 You will need to install our tracking script library after the opening of the <head> tag found in every
 page of your website.
 
-```javascript
+```html
 <script type="text/javascript"
 src="https://shopify.inncee.com/tracker/YOUR_ACCOUNT_ID?shop=YOUR_STORE_URL"></script>
 ```
