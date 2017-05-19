@@ -4,15 +4,10 @@ This guide will be able to help walk you through on how to get started with inst
 * [1.1 Create Account](https://github.com/inncee/docs#11-create-account)
 * [1.2 Install your tracking script](https://github.com/inncee/docs#12-install-your-tracking-script)
 * [1.3 Tracking Events](https://github.com/inncee/docs#13-tracking-events)
-* [Event Setup](https://github.com/inncee/docs#event-setup)
-* [Automatically Tracked Events](https://github.com/inncee/docs#automatically-tracked-events)
-* [Backend Events](https://github.com/inncee/docs#backend-events)
-* [Prerequisites](https://github.com/inncee/docs#prerequisites)
-* [ORDERS API](https://github.com/inncee/docs#orders-api)
-* [CUSTOMER API](https://github.com/inncee/docs#customer-api)
-* [PRODUCTS API](https://github.com/inncee/docs#products-api)
-* [CATEGORY API](https://github.com/inncee/docs#category-api)
-* [CATEGORYMAP API](https://github.com/inncee/docs#categorymap-api)
+	* [Event Setup](https://github.com/inncee/docs#event-setup)
+	* [Automatically Tracked Events](https://github.com/inncee/docs#automatically-tracked-events)
+	* [Backend Events](https://github.com/inncee/docs#backend-events)
+	* [Prerequisites](https://github.com/inncee/docs#prerequisites)
 
 ### 1.1 Create Account 
 Create an account at https://beta.inncee.com. This allows our system to generate:
@@ -140,10 +135,10 @@ There are some events that are automatically tracked by us when you first instal
 - Add to cart clicks
 - UTM Campaign visits
 
-#### Backend Events
-The code snippets above help us to track events that happen on your online store. We will also need to track certain events that happen in the backend of your store as well.
+### 1.4 Sending Backend Data To Inncee
+The code snippets above help us to track events that happen on your online store. But we will also need to track certain events that happen in the backend of your store as well.
 
-We’ve setup a series of API end points that ready to receive JSON data from your store when certain backend events happen.
+We’ve setup a series of API end points that are ready to receive JSON data from your store when certain backend events happen.
 
 For example, when a new order has been created, you can send a JSON response with information about the new order to our API end point and our platform can begin storing that information for analysis.
 
@@ -155,8 +150,8 @@ The recommended method for generating the HMAC using PHP is as follows:
 ```php
 $timestamp = time(); 
 $timestamp = time();
-$secret = <OUR_SHARED_SECRET>;
-$domain = "<OUR_DOMAIN.COM>";
+$secret = <YOUR_SHARED_SECRET>;
+$domain = "<YOUR_DOMAIN.COM>";
 
 $message = "store=".$domain."&timestamp=".$timestamp;
 $hmac = base64_encode(hash_hmac('sha256', $message, $secret, true));
