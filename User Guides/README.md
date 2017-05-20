@@ -1,7 +1,7 @@
 # Inncee Dashboard User Guide
 Welcome to the Inncee Dashboard User Guide. Here you will find the various definitions of the metrics presented in the dashboard as well as suggestions on how you can use the analysis provided by Inncee. Select one of the sections below to get started.
 
-* The Dashboards
+* [The Dashboards](https://github.com/inncee/docs/tree/master/User%20Guides#the-dashboard)
 	* [Store Overview](https://github.com/inncee/docs/tree/master/User%20Guides#store-overview)
 		* [Performance](https://github.com/inncee/docs/tree/master/User%20Guides#performance-tab)
 		* [Trending](https://github.com/inncee/docs/tree/master/User%20Guides#trending-tab)
@@ -21,6 +21,26 @@ Welcome to the Inncee Dashboard User Guide. Here you will find the various defin
 	* [Product Pageviews](https://github.com/inncee/docs/tree/master/User%20Guides#product-pageviews)
 	* [Visitors](https://github.com/inncee/docs/tree/master/User%20Guides#visitors)
 	* [Average Order Value](https://github.com/inncee/docs/tree/master/User%20Guides#average-order-value)
+
+## The Dashboards
+Information in Inncee's platform is organized into various dashboards. Each dashboard fulfills a specific purpose to help give you insights into understanding how your store is performing. When using the products, categories, brands and campaigns dashboard, you'll come across some common buttons and actions in there.
+
+**Changing the display format**
+By default, the product, category, brand and campaign dashboard items are organized in a grid layout format with key metrics regarding the item displayed in each grid item. 
+
+By clicking on the **Grid** or **Table** buttons, you can toggle between a grid layout view or a table layout view. 
+
+![Products Dashboard Display buttons](https://shopify.inncee.com/images/dashboard/dashboard-data-display-buttons.png)
+
+**Exporting products data**
+Exporting data from the dashboards is easy. Simply click on the "Export" button as shown in the image below to get an export of the data displayed in the dashboard.
+
+![Export Data button](https://shopify.inncee.com/images/dashboard/dashboard-export-button.png)
+
+#### Searching
+In the event that you wish to find a specific item in the dashboard, simply click on the "Search" button as shown below and a search field will open up allowing you to search for the item you need to find.
+
+![Search button](https://shopify.inncee.com/images/dashboard/dashboard-search-button.png)
 
 ### Store Overview
 The store overview dashboard is the first dashboard you'll see after you log in to your Inncee account. 
@@ -84,16 +104,6 @@ The metrics and charts presented in this dashboard are listed below. Click on th
 
 ### Products
 The products dashboard displays performance data on all the products that are currently listed in your online store. The product related information that you see in this dashboard (name, images, category information etc) are sent to our platform via our API webhooks. If you're using Shopify, the data is automatically sent over by the Inncee App that you had installed in your Shopify store. If you're using a custom platform, you'll need to send your product data to our API webhooks in order to create/update the product information in Inncee. 
-
-#### Change display format
-You can view the data in the product dashboard using either the **Grid** view format or the **Table** view format, by clicking on the "Grid" or "Table" buttons on the top right hand corner of the dashboard.
-
-![Products Dashboard Display buttons](https://shopify.inncee.com/images/dashboard/dashboard-data-display-buttons.png)
-
-#### Exporting products data
-To export the data in the products dashboard, you can click on the "Export" button located next to the "Grid" and "Table" buttons on the top right hand corner of the dashboard.
-
-![Export Data button](https://shopify.inncee.com/images/dashboard/dashboard-export-button.png)
 
 #### The products detail dashboard
 When you click on any of the products in the product dashboard, you'll be directed to another dashboard showing you the detailed analysis of the performance of the selected product.
