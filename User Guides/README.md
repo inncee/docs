@@ -14,7 +14,7 @@ Welcome to the Inncee Dashboard User Guide. Here you will find the various defin
 * [The Metrics](https://github.com/inncee/docs/tree/master/User%20Guides#the-metrics)
 	* [Purchases](https://github.com/inncee/docs/tree/master/User%20Guides#purchases)
 	* [Sales](https://github.com/inncee/docs/tree/master/User%20Guides#sales)
-	* [Sales (on Product, Category or Brand Dashboard)]
+	* [Sales (on Product, Category or Brand Dashboard)](https://github.com/inncee/docs/blob/master/User%20Guides/README.md#sales-on-product-category-or-brand-dashboards)
 	* [Units Sold](https://github.com/inncee/docs/tree/master/User%20Guides#units-sold)
 	* [Conversion Rate](https://github.com/inncee/docs/tree/master/User%20Guides#conversion-rate)
 	* [Pageviews](https://github.com/inncee/docs/tree/master/User%20Guides#pageviews)
