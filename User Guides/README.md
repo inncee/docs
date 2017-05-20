@@ -26,6 +26,7 @@ Welcome to the Inncee Dashboard User Guide. Here you will find the various defin
 Information in Inncee's platform is organized into various dashboards. Each dashboard fulfills a specific purpose to help give you insights into understanding how your store is performing. When using the products, categories, brands and campaigns dashboard, you'll come across some common buttons and actions in there.
 
 **Changing the display format**
+
 By default, the product, category, brand and campaign dashboard items are organized in a grid layout format with key metrics regarding the item displayed in each grid item. 
 
 By clicking on the **Grid** or **Table** buttons, you can toggle between a grid layout view or a table layout view. 
@@ -33,11 +34,13 @@ By clicking on the **Grid** or **Table** buttons, you can toggle between a grid 
 ![Products Dashboard Display buttons](https://shopify.inncee.com/images/dashboard/dashboard-data-display-buttons.png)
 
 **Exporting products data**
+
 Exporting data from the dashboards is easy. Simply click on the "Export" button as shown in the image below to get an export of the data displayed in the dashboard.
 
 ![Export Data button](https://shopify.inncee.com/images/dashboard/dashboard-export-button.png)
 
-#### Searching
+**Searching**
+
 In the event that you wish to find a specific item in the dashboard, simply click on the "Search" button as shown below and a search field will open up allowing you to search for the item you need to find.
 
 ![Search button](https://shopify.inncee.com/images/dashboard/dashboard-search-button.png)
@@ -107,6 +110,10 @@ The products dashboard displays performance data on all the products that are cu
 
 #### The products detail dashboard
 When you click on any of the products in the product dashboard, you'll be directed to another dashboard showing you the detailed analysis of the performance of the selected product.
+
+**Analyzing the Product Variant**
+
+By default, the product detail dashboard displays all the metrics and information relating to the overall product. But if you wish to drill down to view the information relating to the individual product variants, you can do so by selecting one of the variants in the dropdown list.
 
 
 
