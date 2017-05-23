@@ -167,11 +167,15 @@ The metrics and charts presented in this dashboard includes the following.
 ### Brands
 The brands dashboard will show a list of all the brands in your online store and summarize how the products under each brand has been performing. All brand related information (names, products tagged under each brand) is sent over to our platform via our API webhooks. If you're using Shopify, the data is automatically sent over through the Inncee App that you had installed in your Shopify store. The brand data refers to the "Vendor" information that you had populated for each of your store's product. 
 
+![Brands Dashboard](https://shopify.inncee.com/images/dashboard/inncee-brands.png)
+
 If you're using a custom platform, you'll need to send your brand data to our API webhooks. When you're send your product data to our platform, you'll be asked to populate the brand information about your product in the data that you're sending. Once received, our platform will begin extracting out the brand information and cataloging and summarizing the product related information into the brand dashboards.
 
 #### The Brand Details Dashboard
 
 When you click on any of the brands in the brands dashboard, you'll be directed to the brand details dashboard, which will then provide you with a more in depth analysis of on the performance of your brand and what's driving it.
+
+![Brand Details Dashboard](https://shopify.inncee.com/images/dashboard/inncee-brand-details.png)
 
 The metrics and charts presented in this dashboard includes the following.
 
