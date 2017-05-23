@@ -6,11 +6,12 @@ Welcome to the Inncee Dashboard User Guide. Here you will find the various defin
 		* [Performance](https://github.com/inncee/docs/tree/master/User%20Guides#performance-tab)
 		* [Trending](https://github.com/inncee/docs/tree/master/User%20Guides#trending-tab)
 		* [Traffic Source](https://github.com/inncee/docs/tree/master/User%20Guides#traffic-source)
-	* [Products]
-	* [Categories]
-	* [Brands]
-	* [Action Center]
-	* [Settings]
+	* [Products](https://github.com/inncee/docs/tree/master/User%20Guides#products)
+	* [Categories](https://github.com/inncee/docs/tree/master/User%20Guides#categories)
+	* [Brands](https://github.com/inncee/docs/tree/master/User%20Guides#brands)
+	* [Campaigns](https://github.com/inncee/docs/tree/master/User%20Guides#campaigns)
+	* [Action Center](https://github.com/inncee/docs/tree/master/User%20Guides#action-center)
+	* [Settings](https://github.com/inncee/docs/tree/master/User%20Guides#settings)
 * [The Metrics](https://github.com/inncee/docs/tree/master/User%20Guides#the-metrics)
 	* [Purchases](https://github.com/inncee/docs/tree/master/User%20Guides#purchases)
 	* [Sales](https://github.com/inncee/docs/tree/master/User%20Guides#sales)
