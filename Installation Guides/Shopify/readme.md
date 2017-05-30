@@ -29,8 +29,8 @@ The tracking script library must be installed after the opening of the <head> ta
 page of your website. The page that you're on after you've successfully installed the Inncee app will display the tracking script that you need to install. If you are no longer able to access that page, you can also find your tracking script by logging in to your Inncee dashboard and navigating to the Settings > Integrations dashboard.
 
 ```javascript
-<script type=”text/javascript”
-src=”https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID”></script>
+<script type="text/javascript"
+src="https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID"></script>
 ```
 
 Once the script has been installed, we’ll be able to start recording events on your website.
