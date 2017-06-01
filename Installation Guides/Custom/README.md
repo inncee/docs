@@ -22,15 +22,24 @@ Once generated all this information will be sent to you via email.
 Note: Ignore the pop-up that asks you to connect your store to Shopify.
 
 ### 1.2 Install your tracking script
-You will need to install our tracking script library after the opening of the <head> tag found in every
-page of your website.
+The Inncee tracking library helps us to track the browsing behaviour of your visitors and the specific actions they're taking on your online store. This allows us to measure whether they are engaging well with your store's content.
 
-```html
+The tracking script library must be installed after the opening of the tag found in every page of your website. The page that you're on after you've successfully installed the Inncee app will display the tracking script that you need to install. If you are no longer able to access that page, you can also find your tracking script by logging in to your Inncee dashboard and navigating to the Settings > Integrations dashboard.
+
+```
 <script type="text/javascript"
-src="https://shopify.inncee.com/tracker/YOUR_ACCOUNT_ID?shop=YOUR_STORE_URL"></script>
+src="https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID"></script>
+```
+Do note that you tracking script should be inserted as high up as possible in your head tag
+```
+<head>
+    <script type="text/javascript"
+    src="https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID"></script>
+    ...other codes here ...
+</head>
 ```
 
-Once the script has been installed, you’ll be able to start recording events on your website.
+Once the script has been installed, we’ll be able to start recording events on your website.
 
 ### 1.3 Tracking Events
 For our platform to be able to analyze your data and look for information, we need to be able to record
