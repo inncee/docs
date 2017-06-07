@@ -71,7 +71,8 @@ Below is a detailed guide on the various API end points that Inncee has publishe
             ],
             "refunds": [
             {
-            "created_at": “”,
+	    "refund_id" : "1234",
+            "created_at": "",
             "adjustment": "-3.50",
             "tax_adjustment": "-1.00",
             "quantity": "2"
