@@ -376,39 +376,37 @@ via emails. Valid values are “true” and “false”</td>
     <td colspan="3">
     <pre>
     <code>
-    {
-    	"products": [
-        {
-        	"id": &lt;3245465,
-            "created_at": "2017-02-08T14:56:07-05:00",
-            "updated_at": "2017-02-08T14:56:07-05:00",
-            "product_name": "IPod Touch 8GB",
-            "brand": "pple",
-            "tags": "music, device, white",
-            "path": "product/android-phone/lenovo-a1000-hitam-/0889800170294",
-            "image_url": "https://api.oktagon.co.id/core/images/product /ZTE%20Kis%203%20V8118w%20Biru.jpg",
-            "variants": 
-            	[
-                	{
-                    	"id": 123454534,
-                        "product_id": 3245465,
-                        "name": "8G",
-                        "price": "128.00",
-                        "sku": "IPOD2008PINK",
-                        "inventory_quantity": null
-            		},
-                    {
-                    	"id": 123454534,
-                        "product_id": 3245465,
-                        "name": "16G",
-                        "price": 128.00",
-                        "sku": "IPOD2008PINK",
-                        "inventory_quantity": null
-     				}
-     			]
-     	}
-     	]
-     }
+   {
+     "products": [
+       {
+         "id": 3245465,
+         "created_at": "2017-02-08T14:56:07-05:00",
+         "updated_at": "2017-02-08T14:56:07-05:00",
+         "product_name": "IPod Touch 8GB",
+         "brand": "pple",
+         "tags": "music, device, white",
+         "path": "product/android-phone/lenovo-a1000-hitam-/0889800170294",
+         "image_url": "https://api.oktagon.co.id/core/images/product /ZTE%20Kis%203%20V8118w%20Biru.jpg",
+         "variants":
+         [
+           {
+             "id": "3245465-1",
+             "name": "8G",
+             "price": "128.00",
+             "sku": "IPOD2008PINK",
+             "inventory_quantity": null
+           },
+           {
+             "id": "3245465-2",
+             "name": "16G",
+             "price": "128.00",
+             "sku": "IPOD2008BLUE",
+             "inventory_quantity": null
+           }
+         ]
+       }
+     ]
+   }
      </code>
      </pre>
     </td>
