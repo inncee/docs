@@ -33,54 +33,62 @@ Below is a detailed guide on the various API end points that Inncee has publishe
     <td  colspan="3">
     <pre>
     <code>{
-    "orders": [
-    {
-    	"id": 12345667,
-    	"created_at": "2017-02-08T14:56:07-05:00",
-    	"updated_at": "2017-02-08T14:56:07-05:00",
-    	"fulfilled_at": null,
-    	"total_price": "199.00",
-    	"subtotal_price": "199.00",
-    	"total_tax": "0.00",
-    	"taxes_included": false,
-    	"currency": "SGD",
-    	"total_discounts": "0.00",
-    	"total_line_items_price": "199.00",
-    	"order_reference": "#1002",
-    	"order_source": "web",
-    	"order_status": "open",
-    	"cancelled_at": NULL,
-    	"cancel_reason": NULL,
-    	"customer_id": 1244345,
-    	"discount_codes": [
-    	],
-    		"line_items": [
-            {
-            	"line_item_id": 1071823175,
-                "product_id": 447654529,
-                "variant_id": 12133424,
-                "product_name": "IPod Touch 8GB",
-                "quantity": 1,
-                "price": "199.00",
-                "sku": "IPOD2009BLACK,
-                "variant_name": "Black",
-                "brand": "Apple",
-                "fulfillable_quantity": 1,
-                "total_discount": "0.00"
-    		}
-            ],
-            "refunds": [
-            {
-	    "refund_id" : "1234",
-            "created_at": "",
-            "adjustment": "-3.50",
-            "tax_adjustment": "-1.00",
-            "quantity": "2"
-            }
-            ]
-    }
-    ]
-}
+   {
+     "orders": [
+       {
+         "id": 12345667,
+         "created_at": "2017-02-08T14:56:07-05:00",
+         "updated_at": "2017-02-08T14:56:07-05:00",
+         "fulfilled_at": null,
+         "total_price": "199.00",
+         "subtotal_price": "199.00",
+         "total_tax": "0.00",
+         "taxes_included": false,
+         "currency": "SGD",
+         "total_discounts": "0.00",
+         "total_line_items_price": "199.00",
+         "order_reference": "#1002",
+         "order_source": "web",
+         "order_status": "open",
+         "cancelled_at": null,
+         "cancel_reason": null,
+         "customer_id": 1244345,
+         "discount_codes": [
+         ],
+         "line_items": [
+           {
+             "line_item_id": 1071823175,
+             "product_id": 447654529,
+             "variant_id": 12133424,
+             "product_name": "IPod Touch 8GB",
+             "quantity": 1,
+             "price": "199.00",
+             "sku": "IPOD2009BLACK",
+             "variant_name": "Black",
+             "brand": "Apple",
+             "fulfillable_quantity": 1,
+             "total_discount": "0.00"
+           }
+         ],
+         "refunds": [
+           {
+             "refund_id" : "1234",
+             "created_at": "",
+             "adjustment": "-3.50",
+             "tax_adjustment": "-1.00",
+             "quantity": "2"
+           },
+           {
+             "refund_id" : "1235",
+             "created_at": "",
+             "adjustment": "-3.50",
+             "tax_adjustment": "-1.00",
+             "quantity": "2"
+           }
+         ]
+       }
+     ]
+   }
     </code>
     </pre>
     </td>
