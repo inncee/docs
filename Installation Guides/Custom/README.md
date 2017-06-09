@@ -26,12 +26,12 @@ The Inncee tracking library helps us to track the browsing behaviour of your vis
 
 The tracking script library must be installed after the opening of the tag found in every page of your website. The page that you're on after you've successfully installed the Inncee app will display the tracking script that you need to install. If you are no longer able to access that page, you can also find your tracking script by logging in to your Inncee dashboard and navigating to the Settings > Integrations dashboard.
 
-```
+```html
 <script type="text/javascript"
 src="https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID"></script>
 ```
 Do note that you tracking script should be inserted as high up as possible in your head tag
-```
+```html
 <head>
     <script type="text/javascript"
     src="https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID"></script>
@@ -66,13 +66,13 @@ Install these code snippets into your online store to begin tracking the followi
 		<br /><br /> innceeID * – Your unique account ID
     </td>
     <td>
-		<pre>
-		<code>
-		analytics.identify(
-		'&lt;USERS_ID&gt;',{'innceeID':
-		'&lt;YOUR_INNCEE_ACCOUNT_ID&gt;'});
-		</code>
-		 </pre>
+	<pre>
+	<code>
+	analytics.identify(
+	'&lt;USERS_ID&gt;',{'innceeID':
+	'&lt;YOUR_INNCEE_ACCOUNT_ID&gt;'});
+	</code>
+	 </pre>
     </td>
   </tr>
   <tr>
