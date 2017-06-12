@@ -72,7 +72,7 @@ Install these code snippets into your online store to begin tracking the followi
 	'&lt;USERS_ID&gt;',{'innceeID':
 	'&lt;YOUR_INNCEE_ACCOUNT_ID&gt;'});
 	</code>
-	 </pre>
+	</pre>
     </td>
   </tr>
   <tr>
@@ -86,14 +86,15 @@ Install these code snippets into your online store to begin tracking the followi
     <pre>
     <code>
     analytics.track(
-    “addtocart”,{‘innceeID’:
-    ‘&lt;YOUR_ACCOUNT_ID&gt;’,
-    ‘categoryID’:‘yyyyy’,
-    ‘productID’:‘ppppp’,
-    ‘variantID’: ‘’,
-    ‘Price’: ’12.50’,
-    ‘Quantity’: ‘1’,
-    ‘Currency’: ‘$’}
+    "addtocart",{
+    'innceeID':
+    '&lt;YOUR_ACCOUNT_ID&gt;',
+    'categoryID':'yyyyy',
+    'productID':'ppppp',
+    'variantID': 'xxxx',
+    'Price': '12.50',
+    'Quantity': '1',
+    'Currency': '$'}
     );
     </code>
      </pre>
@@ -109,9 +110,9 @@ Install these code snippets into your online store to begin tracking the followi
     <pre>
     <code>
     analytics.identify(
-    '&lt;USER_ID&gt;',{'innceeID':
-    '&lt;YOUR_ACCOUNT_ID&gt;,
-    ‘cartID’ : ‘qqqqqq’}
+    '&lt;USER_ID&gt;',{
+    'innceeID': '&lt;YOUR_ACCOUNT_ID&gt;',
+    'cartID' : 'qqqqqq'}
     );
     </code>
      </pre>
@@ -127,8 +128,8 @@ Install these code snippets into your online store to begin tracking the followi
     <pre>
     <code>
     analytics.track(“OrderComplete”,{
-    ‘innceeID’:‘&lt;YOUR_ACCOUNT_ID&gt;’,
-    ‘orderID’:‘xxxxxx’}
+    'innceeID':'&lt;YOUR_ACCOUNT_ID&gt;',
+    'orderID':‘xxxxxx’}
     );
     </code>
      </pre>
