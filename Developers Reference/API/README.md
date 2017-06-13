@@ -269,7 +269,7 @@ than or equal to $30</li>
   <tr>
     <th>Customers</th>
     <th>PUT</th> 
-    <th>/hooks/customers/create</th>
+    <th>/hooks/customers/update</th>
   </tr>
   <tr>
     <td colspan="3">Called when a customer account has been updated</td>
