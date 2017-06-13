@@ -24,7 +24,7 @@ Below is a detailed guide on the various API end points that Inncee has publishe
   <tr>
     <th>Orders</th>
     <th>PUT</th> 
-    <th>/hooks/order/create</th>
+    <th>/hooks/order/update</th>
   </tr>
   <tr>
     <td  colspan="3">Called when a new order has been created</td>
