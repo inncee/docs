@@ -1,11 +1,11 @@
 # Inncee's API Reference Guide
 Below is a detailed guide on the various API end points that Inncee has published to allow users to send data into our platform. 
 
-* [Orders](https://github.com/inncee/docs)
-* [Customers](https://github.com/inncee/docs)
-* [Products](https://github.com/inncee/docs)
-* [Category](https://github.com/inncee/docs)
-* [CategoryMap](https://github.com/inncee/docs)
+* [Orders](https://github.com/inncee/docs/tree/master/Developers%20Reference/API#orders-api)
+* [Customers](https://github.com/inncee/docs/tree/master/Developers%20Reference/API#customers-api)
+* [Products](https://github.com/inncee/docs/tree/master/Developers%20Reference/API#products-api)
+* [Category](https://github.com/inncee/docs/tree/master/Developers%20Reference/API#category-api)
+* [CategoryMap](https://github.com/inncee/docs/tree/master/Developers%20Reference/API#categorymap-api)
 
 ## ORDERS API 
 
@@ -508,7 +508,7 @@ via emails. Valid values are “true” and “false”</td>
         "created_at": "2017-02-08T14:56:07-05:00",
         "updated_at": "2017-02-08T14:56:07-05:00",
         "category_name": "Android Phones",
-        "path": "/products/android-phone/AN03",
+        "path": "/categories/android-phone/AN03",
         "parent_id": "2434435"
         }
         ]
