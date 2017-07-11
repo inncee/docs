@@ -486,7 +486,7 @@ via emails. Valid values are “true” and “false”</td>
          "product_name": "IPod Touch 8GB",
          "brand": "pple",
          "tags": "music, device, white",
-         "path": "product/android-phone/lenovo-a1000-hitam-/0889800170294",
+         "path": "/product/android-phone/lenovo-a1000-hitam-/0889800170294",
          "image_url": "https://api.oktagon.co.id/core/images/product /ZTE%20Kis%203%20V8118w%20Biru.jpg",
          "variants":
          [
