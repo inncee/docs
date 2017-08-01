@@ -60,10 +60,17 @@ Install these code snippets into your online store to begin tracking the followi
   </tr>
   <tr>
     <td>Add to cart</td>
-    <td>Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button
-    <br /><br />innceeID * – Your unique account ID
-    <br /><br />categoryID * - The unique ID of your category
-    <br /><br />productID * – The unique ID of the product being added to cart variantID
+    <td>
+		Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button
+		<ul>
+			<li><strong>innceeID *</strong> - Your unique account ID</li>
+			<li><strong>categoryID *</strong> - The unique ID of your category</li>
+			<li><strong>productID *</strong> - The unique ID of the product being added to cart</li>
+			<li><strong>variantID *</strong> - The unique ID of th variant being added to cart</li>
+			<li><strong>Price</strong> - The unit price of the item added to cart</li>
+			<li><strong>Quantity</strong> - Quantity of the item added to cart</li>
+			<li><strong>Currency</strong> - Currency of the item that was added to cart</li>
+		</ul>
     </td>
     <td>
     <pre>
@@ -150,9 +157,12 @@ Install these code snippets into your online store to begin tracking the followi
   </tr>
     <tr>
     <td>Order Completed</td>
-    <td>Required. Records the event when an order has been completed
-    <br /><br />innceeID * – Your unique account ID
-    <br /><br />orderID * - The unique order ID
+    <td>
+		Required. Records the event when an order has been completed
+		<ul>
+			<li><strong>innceeID *</strong> - Your unique account ID</li>
+			<li><strong>orderID *</strong> - The unique order ID</li>
+		</ul>
     </td>
     <td>
     <pre>
