@@ -61,8 +61,7 @@ Install these code snippets into your online store to begin tracking the followi
   <tr>
     <td>Add to cart</td>
     <td>
-		Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button
-		<br>
+		<p>Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button</p>
 		<ul>
 			<li><strong>innceeID *</strong> - Your unique account ID</li>
 			<li><strong>categoryID *</strong> - The unique ID of your category</li>
@@ -92,8 +91,7 @@ Install these code snippets into your online store to begin tracking the followi
   <tr>
     <td>Checkout</td>
     <td>
-		Required. This code block records the event when a user initiates a checkout. It should be included on the first page of the checkout workflow.
-		<br>
+		<p>Required. This code block records the event when a user initiates a checkout. It should be included on the first page of the checkout workflow.</p>
 		<ul>
 			<li><strong>innceeID *</strong> – Your unique account ID</li>
 			<li><strong>created_at</strong> - Date the checkout was created</li>
@@ -160,12 +158,11 @@ Install these code snippets into your online store to begin tracking the followi
     <tr>
     <td>Order Completed</td>
     <td>
-		Required. Records the event when an order has been completed
-		<br>
-		<ul>
-			<li><strong>innceeID *</strong> - Your unique account ID</li>
-			<li><strong>orderID *</strong> - The unique order ID</li>
-		</ul>
+    	<p>Required. Records the event when an order has been completed</p>
+	<ul>
+		<li><strong>innceeID *</strong> - Your unique account ID</li>
+		<li><strong>orderID *</strong> - The unique order ID</li>
+	</ul>
     </td>
     <td>
     <pre>
