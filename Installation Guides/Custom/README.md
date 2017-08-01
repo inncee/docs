@@ -1,10 +1,10 @@
 # Installation and Setup
 This guide will be able to help walk you through on how to get started with installing Inncee onto your custom website.
 
-* [1.1 Create Account](https://github.com/inncee/docs/Installation%20Guides/Custom#11-create-account)
-* [1.2 Install your tracking script](https://github.com/inncee/docs/Installation%20Guides/Custom#12-install-your-tracking-script)
-* [1.3 Tracking Events](https://github.com/inncee/docs/Installation%20Guides/Custom#13-tracking-events)
-	* [Event Setup](https://github.com/inncee/docs#event-setup)
+* [1.1 Create Account](https://github.com/inncee/docs/tree/master/Installation%20Guides/Custom#11-create-account)
+* [1.2 Install your tracking script](https://github.com/inncee/docs/tree/master/Installation%20Guides/Custom#12-install-your-tracking-script)
+* [1.3 Tracking Events](https://github.com/inncee/docs/tree/master/Installation%20Guides/Custom#13-tracking-events)
+	* [Event Setup](https://github.com/inncee/docs/tree/master/Installation%20Guides/Custom#event-setup)
 	* [Automatically Tracked Events](https://github.com/inncee/docs#automatically-tracked-events)
 	* [Backend Events](https://github.com/inncee/docs#backend-events)
 * [1.4 Sending Backend Data via API](https://github.com/inncee/docs/Installation%20Guides/Custom#14-sending-backend-data-to-inncee)
@@ -59,24 +59,6 @@ Install these code snippets into your online store to begin tracking the followi
     <th>Code</th>
   </tr>
   <tr>
-    <td>User logged in</td>
-    <td>
-		Required. This code block helps us to identify visitors when they are logged in. It should be included on every public page of your website when the user has logged in
-		<br /><br /> It can be omitted if the user is not logged in 
-		<br /><br /> innceeID * – Your unique account ID
-    </td>
-    <td>
-    <pre>
-    <code>
-    analytics.identify(
-    '&lt;USERS_ID&gt;',{
-    'innceeID': '&lt;YOUR_INNCEE_ACCOUNT_ID&gt;'
-    });
-    </code>
-    </pre>
-    </td>
-  </tr>
-  <tr>
     <td>Add to cart</td>
     <td>Required. This code block records the event whenever a user clicks on the add to cart button. It should be included on every page that has an “Add To Cart” button
     <br /><br />innceeID * – Your unique account ID
@@ -86,34 +68,82 @@ Install these code snippets into your online store to begin tracking the followi
     <td>
     <pre>
     <code>
-    analytics.track(
-    "addtocart",{
-    'innceeID': '&lt;YOUR_ACCOUNT_ID&gt;',
-    'categoryID': 'yyyyy',
-    'productID': 'ppppp',
-    'variantID': 'xxxx',
-    'Price': '12.50',
-    'Quantity': '1',
-    'Currency': '$'}
-    );
+    analytics.track("addtocart", {
+    	'innceeID': '&lt;YOUR_ACCOUNT_ID&gt;',
+    	'categoryID': 'yyyyy',
+    	'productID': 'ppppp',
+    	'variantID': 'xxxx',
+    	'Price': '12.50',
+    	'Quantity': '1',
+    	'Currency': '$'
+	});
     </code>
      </pre>
     </td>
   </tr>
   <tr>
     <td>Checkout</td>
-    <td>Required. This code block records the event when a user initiates a checkout. It should be included on every page that has a checkout button.
-    <br /><br />innceeID * – Your unique account ID
-    <br /><br />cartID * - A unique ID of the shopping cart being checked out
+    <td>
+		Required. This code block records the event when a user initiates a checkout. It should be included on the first page of the checkout workflow.
+		<ul>
+			<li><strong>innceeID *</strong> – Your unique account ID</li>
+			<li><strong>created_at</strong> - Date the checkout was created</li>
+			<li><strong>currency</strong> - The currency the customer is paying in</li>
+			<li><strong>customer_id</strong> - The customer's unique identifier</li>
+			<li><strong>discount_code</strong> - The discount codes applied to the checkout</li>
+			<li><strong>email</strong> - The customer's email</li>
+			<li><strong>subtotal_price</strong> - Price of the checkout before shipping and taxes</li>
+			<li><strong>total_price</strong> - Sum of all the items in the checkout including shipping, taxes and discounts.</li>
+			<li><strong>total_tax</strong> - Sum of all the taxes applied to the checkout</li>
+			<li><strong>line_items</strong> - A list of all the line item objects, each containing info about each item in the checkout.</li>
+			<li><strong>shipping_info</strong> - Information about the shipping rates applied to the checkout</li>
+			<li><strong>applied_discount</strong> - The total discounts applied to the checkout.</li>
+		</ul>
     </td>
     <td>
     <pre>
     <code>
-    analytics.identify(
-    '&lt;USER_ID&gt;',{
-    'innceeID': '&lt;YOUR_ACCOUNT_ID&gt;',
-    'cartID' : 'qqqqqq'}
-    );
+    analytics.track("checkout", {
+    	'innceeID': '&lt;YOUR_ACCOUNT_ID&gt;',
+    	"created_at": "2012-10-12T07:05:27-04:00",
+	    "currency": "USD",
+	    "customer_id": 207119551,
+	    "discount_code": null,
+	    "email": "bob.norman@hostmail.com",
+	    "subtotal_price": "398.00",
+	    "total_price": "408.99",
+	    "total_tax": "21.49",
+	    "line_items": [
+	      {
+	        "id": "84b57c8bf61fa614",
+	        "product_id": 632910392,
+	        "variant_id": 808950810,
+	        "sku": "IPOD2008PINK",
+	        "vendor": "Apple",
+	        "title": "IPod Nano - 8GB",
+	        "price": "199.00",
+	        "quantity": 1,
+	        "applied_discount": "10.00"
+	      },
+	      {
+	        "id": "84b57c8bf61fa615",
+	        "product_id": 632910393,
+	        "variant_id": 808950811,
+	        "sku": "IPOD2008GOLD",
+	        "vendor": "Apple",
+	        "title": "IPod Nano - 8GB",
+	        "price": "199.00",
+	        "quantity": 1,
+	        "applied_discount": "2.00"
+	      }
+	    ],
+	    "shipping_info": {
+	      "price": "10.99",
+	      "title": "Standard Shipping"
+	    },
+	    "applied_discount": "12.00"
+	  }
+	});
     </code>
      </pre>
     </td>
@@ -127,9 +157,9 @@ Install these code snippets into your online store to begin tracking the followi
     <td>
     <pre>
     <code>
-    analytics.track(“OrderComplete”,{
-    'innceeID': '&lt;YOUR_ACCOUNT_ID&gt;',
-    'orderID': ‘xxxxxx’
+    analytics.track(“ordercomplete”,{
+    	'innceeID': '&lt;YOUR_ACCOUNT_ID&gt;',
+    	'orderID': ‘xxxxxx’
     });
     </code>
      </pre>
