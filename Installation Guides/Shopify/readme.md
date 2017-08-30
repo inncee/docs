@@ -54,7 +54,7 @@ Select the “theme.liquid” file under your “Layout” folder to load it up 
 ### 2.5 Paste your tracking library script in the theme file
 Paste the your script file codes after the the <title> tags (you should find them a couple of lines down from the <head> tag) Please make sure that you code is pasted only after the closing </title> tag.
 
-![Pasting the script into the theme file](https://shopify.inncee.com/images/script-edit-html-3.png)
+![Pasting the script into the theme file](https://shopify.inncee.com/images/script-edit-html-4.png)
 
 ### 2.6 Click "Save"
 Click the “Save” button and you’re done!
