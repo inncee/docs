@@ -28,13 +28,13 @@ The tracking script library must be installed after the opening of the tag found
 
 ```html
 <script type="text/javascript"
-src="https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID"></script>
+src="https://api.inncee.com/scripts/tracker/YOUR_ACCOUNT_ID"></script>
 ```
 Do note that you tracking script should be inserted as high up as possible in your head tag
 ```html
 <head>
     <script type="text/javascript"
-    src="https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID"></script>
+    src="https://api.inncee.com/scripts/tracker/YOUR_ACCOUNT_ID"></script>
     ...other codes here ...
 </head>
 ```

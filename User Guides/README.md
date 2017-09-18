@@ -46,6 +46,11 @@ In the event that you wish to find a specific item in the dashboard, simply clic
 
 ![Search button](https://shopify.inncee.com/images/dashboard/dashboard-search-button.png)
 
+### Your Insights Dashboard
+The insights dashboard is where we publish insights that we discover from analyzing your data.  
+
+
+
 ### Store Overview
 The store overview dashboard is the first dashboard you'll see after you log in to your Inncee account. 
 
