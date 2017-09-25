@@ -2,6 +2,7 @@
 Welcome to the Inncee Dashboard User Guide. Here you will find the various definitions of the metrics presented in the dashboard as well as suggestions on how you can use the analysis provided by Inncee. Select one of the sections below to get started.
 
 * [The Dashboards](https://github.com/inncee/docs/tree/master/User%20Guides#the-dashboard)
+	* [Insights Dashboard](https://github.com/inncee/docs/tree/master/User%20Guides#your-insights-dashboard)
 	* [Store Overview](https://github.com/inncee/docs/tree/master/User%20Guides#store-overview)
 		* [Performance](https://github.com/inncee/docs/tree/master/User%20Guides#performance-tab)
 		* [Trending](https://github.com/inncee/docs/tree/master/User%20Guides#trending-tab)
@@ -12,11 +13,11 @@ Welcome to the Inncee Dashboard User Guide. Here you will find the various defin
 	* [Campaigns](https://github.com/inncee/docs/tree/master/User%20Guides#campaigns)
 	* [Action Center](https://github.com/inncee/docs/tree/master/User%20Guides#action-center)
 	* [Settings](https://github.com/inncee/docs/tree/master/User%20Guides#settings)
-* [The Insights]
-	* Visitor Engagement Analysis
-	* Add-to-cart Analysis
-	* Abandoned Cart Rate Analysis
-	* Products to cross-sell
+* [The Insights](https://github.com/inncee/docs/tree/master/User%20Guides#the-insights)
+	* [Visitor Engagement Analysis](https://github.com/inncee/docs/tree/master/User%20Guides#visitor-engagement-analysis)
+	* [Add-to-cart Analysis](https://github.com/inncee/docs/tree/master/User%20Guides#add-to-cart-analysis)
+	* [Abandoned Cart Rate Analysis](https://github.com/inncee/docs/tree/master/User%20Guides#abandoned-cart-rate-analysis)
+	* [Products to cross-sell](https://github.com/inncee/docs/tree/master/User%20Guides#products-to-cross-sell)
 * [The Metrics](https://github.com/inncee/docs/tree/master/User%20Guides#the-metrics)
 	* [Purchases](https://github.com/inncee/docs/tree/master/User%20Guides#purchases)
 	* [Sales](https://github.com/inncee/docs/tree/master/User%20Guides#sales)
@@ -56,7 +57,7 @@ The insights dashboard is where we publish insights that we discover from analyz
 
 ![Insights Dashboard](https://inncee.com/wp-content/uploads/2017/09/Insights-Dashboard-With-No-Sidebar.png)
 
-The 2 key metrics that we are aiming to improve for your store are the **Overall Conversion Rate** and the **Average Order Value**. Every insight published in the dashboard are all about driving improvements to these 2 metrics. To see a list of the insights that we publish, go to The Insights section. 
+The 2 key metrics that we are aiming to improve for your store are the **Overall Conversion Rate** and the **Average Order Value**. Every insight published in the dashboard are all about driving improvements to these 2 metrics. To see a list of the insights that we publish, go to [The Insights](https://github.com/inncee/docs/tree/master/User%20Guides#the-insights) section. 
 
 ### Store Overview
 The store overview dashboard is the first dashboard you'll see after you log in to your Inncee account. 
