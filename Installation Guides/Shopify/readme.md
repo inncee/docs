@@ -6,21 +6,24 @@ This guide will help walk you through installing the Inncee application on your 
 The Inncee app allows us to connect to your store's system, allowing us to be automatically notified when you make update your store catalog or receive orders.
 
 ### 1.1 Create Account
-Create your Inncee account at https://beta.inncee.com. Be sure to select "Shopify" as your platform in the dropdown list.
+Create your Inncee account at <https://beta.inncee.com/auth/register>. Be sure to select "Shopify" as your platform in step 2 of the registration process.
 
-![Inncee's registration page](https://shopify.inncee.com/images/inncee-registration.png)
+![](https://beta.inncee.com/images/screenshots/registration-step-1.png)
 
-### 1.2 Click on the "Shopify" button to begin the app installation
-Once you've completed registering for your Inncee account, a pop-up will appear asking you to "Connect your Store". Click on the Shopify icon in the modal to begin the installation.
+### 1.2 Enter your myshopify domain to begin installing the app
+In step 3 of the registration process, you'll be prompted to enter your store's myshopify domain. Once you've filled in your domain, click on the "Begin installation" button and you'll be directed back to your Shopify store where you'll need to approve our app install request.
 
+![](https://beta.inncee.com/images/screenshots/registration-step-3.png)
 
+### 1.3 Approve the permissions Inncee is requesting on your Shopify store
 
-### 1.3 Click on "Approve" to approve the permissions Inncee is requesting for on your Shopify store page.
-After you've clicked on the button to begin the installation, you may be asked to log into your Shopify store if you are not logged in. After you're logged in, you'll be directed to a permissions page that shows you all the permissions Inncee requires to analyze your store's performance. Click on the "Approve" button to complete the app installation.
-
-Once successful, you'll be directed to the next page with further instructions on how to install the Inncee tracking library.
+Login to your Shopify store and you'll be navigated to a page in your store that shows our app requesting for a few READ permissions. You'll need to approve our permission request in order to continue.
 
 ![App install successful](https://shopify.inncee.com/images/inncee-shopify-install-success.png)
+
+### 1.4 Install your Inncee tracking script in your theme files
+
+Once you've finished approving the permissions, you'll be redirected back to your Inncee dashboard and there will be just 1 final step to complete the installation. Embedding the javascript tracker in your Shopify theme files. See the next section for the detailed steps.
 
 ## 2. Installing the Inncee tracker into your Shopify store.
 The Inncee tracking library helps us to track the browsing behaviour of your visitors and the specific actions they're taking on your online store. This allows us to measure whether they are engaging well with your store's content. 
@@ -28,7 +31,7 @@ The Inncee tracking library helps us to track the browsing behaviour of your vis
 The tracking script library must be installed after the opening of the <head> tag found in every
 page of your website. The page that you're on after you've successfully installed the Inncee app will display the tracking script that you need to install. If you are no longer able to access that page, you can also find your tracking script by logging in to your Inncee dashboard and navigating to the Settings > Integrations dashboard.
 
-```javascript
+```html
 <script type="text/javascript"
 src="https://api.inncee.com/scripts/shopify/tracker/YOUR_ACCOUNT_ID"></script>
 ```
